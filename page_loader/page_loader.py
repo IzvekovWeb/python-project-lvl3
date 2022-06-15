@@ -1,2 +1,5 @@
-def loader(url, output):
-    print("Loading...")
+import os
+
+
+def loader(url, output=os.getcwd()):
+    print(output)
