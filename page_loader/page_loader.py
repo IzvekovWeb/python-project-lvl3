@@ -1,15 +1,23 @@
 import os
 import re
+import requests
 
 
-def loader(url, output=os.getcwd()):
-    path = "/mnt/d/Pro100Sany/Python/Hexlet/python-project-lvl3/output"
-    # output = os.path.join(path)
+def download(url, output=os.getcwd()):
+    file_name = create_file_name(url)
+    output = os.path.join(output, file_name)
+
+    r = requests.get(url)
+
+    with open(output, 'w+') as file:
+        file.write(r.text)
+
+    return file_name
 
 
 def create_file_name(url):
 
-    # Отделяе схему (https://)
+    # Отделяем схему (https://)
     file_name = re.search(r"(?<=^https:\/\/).+", url, flags=re.MULTILINE)
     # Заменяем разделители на дефис
     file_name = re.sub(r'[./;,\s_]', '-', file_name.group(0))
@@ -23,3 +31,5 @@ def create_file_name(url):
         file_name += '.html'
 
     return file_name
+
+# download('https://page-loader.hexlet.repl.co/')

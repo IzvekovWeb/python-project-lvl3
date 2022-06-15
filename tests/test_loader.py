@@ -1,11 +1,16 @@
-from page_loader.page_loader import loader
+from page_loader.page_loader import download
 import tempfile
+# import requests_mock
 
-def test_loader():
+
+def test_loader(requests_mock):
+
+    # requests_mock.get('http://test.com', text='data')
+    # assert 'data' ==requests.get('http://test.com').text
 
     with tempfile.TemporaryDirectory() as tmpdirname:
 
-        loader('https://page-loader.hexlet.repl.co/', tmpdirname)
+        download('https://page-loader.hexlet.repl.co/', tmpdirname)
 
         with open('tests/fixtures/loader_result.html') as fixture:
             result = fixture.read()

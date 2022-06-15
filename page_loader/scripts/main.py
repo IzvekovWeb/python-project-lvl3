@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from page_loader.page_loader import loader
+from page_loader.page_loader import download
 import argparse
 import os
 
@@ -18,8 +18,9 @@ def main():
 
     args = parser.parse_args()
 
-    page = loader(args.url, output=args.output)
-    print(page)
+    page_name = download(args.url, output=args.output)
+
+    print(page_name)
 
 
 if __name__ == '__main__':

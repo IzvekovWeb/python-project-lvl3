@@ -4,8 +4,7 @@ install:
 
 # Запуск программ
 page-loader:
-	poetry run page-loader --output /mnt/d/Pro100Sany/Python/Hexlet/python-project-lvl3/output https://ru.hexlet.io/courses
-
+	poetry run page-loader --output /mnt/d/Pro100Sany/Python/Hexlet/python-project-lvl3/output 'https://page-loader.hexlet.repl.co/'
 
 # Сборка проекта в whl файл
 build:
