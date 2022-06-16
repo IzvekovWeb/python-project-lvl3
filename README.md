@@ -8,3 +8,10 @@
 ![python](https://img.shields.io/badge/python-%3E%3D3.8-brightgreen)
 ![pip](https://img.shields.io/badge/pip-%3E%3D20-blue)
 ![License](https://img.shields.io/github/license/IzvekovWeb/python-project-lvl2) 
+
+
+### Загрузка страницы
+
+    page-loader [--output <path>] <url>
+
+[![asciicast](https://asciinema.org/a/u21gtOZNugMc0xG3U8FaRSi1H.svg)](https://asciinema.org/a/u21gtOZNugMc0xG3U8FaRSi1H)
