@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.1.0"
+version = "0.1.1"
 description = "Hexlet project #3"
 authors = ["Alexander Izvekov <izvekov.web@yandex.ru>"]
 license = "MIT"
@@ -10,6 +10,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
+bs4 = "^0.0.1"
 
 [tool.poetry.scripts]
 page-loader = "page_loader.scripts.main:main"

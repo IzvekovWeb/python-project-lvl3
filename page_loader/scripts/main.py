@@ -1,7 +1,9 @@
 #!/usr/bin/env python
-from page_loader.page_loader import download
 import argparse
 import os
+
+from page_loader.page_loader import download
+from page_loader.image_loader import download_images
 
 
 def main():
@@ -19,6 +21,7 @@ def main():
     args = parser.parse_args()
 
     page_name = download(args.url, output=args.output)
+    download_images(args.url, page_name, output=args.output, )
 
     print(page_name)
 
