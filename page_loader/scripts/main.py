@@ -21,7 +21,8 @@ def main():
     args = parser.parse_args()
 
     page_name = download(args.url, output=args.output)
-    download_images(args.url, page_name, output=args.output, )
+
+    download_images(args.url, args.output, page_name)
 
     print(page_name)
 
