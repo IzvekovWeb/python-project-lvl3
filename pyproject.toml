@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.1.1"
+version = "0.2.1"
 description = "Hexlet project #3"
 authors = ["Alexander Izvekov <izvekov.web@yandex.ru>"]
 license = "MIT"

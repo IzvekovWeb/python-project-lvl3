@@ -23,9 +23,9 @@ def download_images(url, output, index):
 
     # Создаем папку для файлов, если её нет
     folder_name = create_file_name(url, 'files')
-    path_to_dir = os.path.join(output, folder_name)
-    if not os.path.exists(path_to_dir):
-        os.mkdir(path_to_dir)
+    path_to_folder = os.path.join(output, folder_name)
+    if not os.path.exists(path_to_folder):
+        os.mkdir(path_to_folder)
 
     # Скачиваем и переименовываем все картинки
     for i in range(len(image_links)):
@@ -37,8 +37,8 @@ def download_images(url, output, index):
 
         r = requests.get(img_full_path)
 
-        img_new_p = os.path.join(path_to_dir, new_img_name)
-        with open(img_new_p, "wb") as fi:
+        img_new_p = os.path.join(folder_name, new_img_name)
+        with open(os.path.join(output, img_new_p), "wb") as fi:
             fi.write(r.content)
 
         image_links[i]['new_p'] = img_new_p

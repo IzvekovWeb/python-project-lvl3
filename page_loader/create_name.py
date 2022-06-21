@@ -8,7 +8,7 @@ def create_file_name(url, ext='html'):
     # (?<=https:\/\/(?!.*https:\/\/)).+
 
     # Заменяем разделители на дефис
-    file_name = re.sub(r'[./;,\s_]', '-', file_name.group(0))
+    file_name = re.sub(r'[./;,\s_:]', '-', file_name.group(0))
 
     def add_extension(name, ext):
         # Проверяем наличие расширения
