@@ -13,7 +13,7 @@ class URLDownloader:
         self.output = output
         host = ''
         self.host = host
-    
+
     def download(self):
         page_name = self.page_download()
         self.images_download(page_name)

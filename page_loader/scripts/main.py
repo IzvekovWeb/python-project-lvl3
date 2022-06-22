@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 import argparse
 import os
-import sys
-sys.path.append('/mnt/d/Pro100Sany/Python/Hexlet/python-project-lvl3/page_loader') # noqa
 
 from URLDownloader import URLDownloader  # noqa
 
