@@ -13,6 +13,11 @@ class URLDownloader:
         self.output = output
         host = ''
         self.host = host
+    
+    def download(self):
+        page_name = self.page_download()
+        self.images_download(page_name)
+        return page_name
 
     def page_download(self):
         file_name = self.create_file_name(self.url)

@@ -1,16 +1,11 @@
 import os
-import requests
+import sys
+sys.path.append('/mnt/d/Pro100Sany/Python/Hexlet/python-project-lvl3/page_loader') # noqa
 
-from page_loader.create_name import create_file_name
+from URLDownloader import URLDownloader  # noqa
 
 
 def download(url, output=os.getcwd()):
-    file_name = create_file_name(url)
-    full_path = os.path.join(output, file_name)
+    downloader = URLDownloader(url, output)
 
-    r = requests.get(url)
-
-    with open(full_path, 'w+') as file:
-        file.write(r.text)
-
-    return file_name
+    print(downloader.download())
