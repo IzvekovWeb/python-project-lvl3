@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 import argparse
 import os
+import sys
+sys.path.append('/mnt/d/Pro100Sany/Python/Hexlet/python-project-lvl3/page_loader') # noqa
 
-from page_loader.page_loader import download
-from page_loader.image_loader import download_images
+from URLDownloader import URLDownloader  # noqa
 
 
 def main():
@@ -20,9 +21,11 @@ def main():
 
     args = parser.parse_args()
 
-    page_name = download(args.url, output=args.output)
+    downloader = URLDownloader(args.url, args.output)
 
-    download_images(args.url, args.output, page_name)
+    page_name = downloader.page_download()
+
+    downloader.images_download(page_name)
 
     print(page_name)
 
