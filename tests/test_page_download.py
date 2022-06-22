@@ -1,10 +1,11 @@
-from page_loader.page_loader import download
 import tempfile
 import requests_mock
 import os
 
+from URLDownloader import URLDownloader
 
-def test_download(requests_mock):
+
+def test_page_download(requests_mock):
     with open('tests/fixtures/loader_result.html') as fixture:
         result = fixture.read()
 
@@ -12,9 +13,11 @@ def test_download(requests_mock):
 
     with tempfile.TemporaryDirectory() as temp_dir:
 
+        downloader = URLDownloader('https://page-loader.hexlet.repl.co/')
         tmp_file = os.path.join(temp_dir, 'page-loader-hexlet-repl-co-.html')
 
-        download('https://page-loader.hexlet.repl.co/', temp_dir)
+        downloader = URLDownloader('https://page-loader.hexlet.repl.co/', temp_dir)
+        downloader.page_download()
 
         with open(tmp_file) as tmp:
             tmp_result = tmp.read()

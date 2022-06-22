@@ -1,5 +1,4 @@
-from page_loader.image_loader import download_images
-from page_loader.page_loader import download
+from URLDownloader import URLDownloader
 
 import tempfile
 import requests_mock
@@ -17,6 +16,7 @@ def test_download_images(requests_mock):
     requests_mock.get('https://page-loader.hexlet.repl.co/assets/professions/nodejs.png', text=result)
     
     
+    
     with tempfile.TemporaryDirectory() as temp_dir:
 
         tmp_file = os.path.join(temp_dir, 'page-loader-hexlet-repl-co-_files',\
@@ -24,7 +24,8 @@ def test_download_images(requests_mock):
 
         print(shutil.copyfile('tests/fixtures/loader_result.html', os.path.join(temp_dir, 'page-loader-hexlet-repl-co-.html')))
 
-        download_images('https://page-loader.hexlet.repl.co/', temp_dir, 'page-loader-hexlet-repl-co-.html')
+        downloader = URLDownloader('https://page-loader.hexlet.repl.co/', temp_dir)
+        downloader.images_download('page-loader-hexlet-repl-co-.html')
 
         with open(tmp_file, 'r') as tmp:
             tmp_result = tmp.read()
