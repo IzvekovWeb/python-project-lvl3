@@ -24,6 +24,8 @@ def main():
     page_name = downloader.page_download()
 
     downloader.images_download(page_name)
+    downloader.css_download(page_name)
+    downloader.js_download(page_name)
 
     print(page_name)
 

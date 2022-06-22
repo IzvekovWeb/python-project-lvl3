@@ -17,10 +17,12 @@ class URLDownloader:
     def download(self):
         page_name = self.page_download()
         self.images_download(page_name)
+        self.css_download(page_name)
+        self.js_download(page_name)
         return page_name
 
     def page_download(self):
-        file_name = self.create_file_name(self.url)
+        file_name = self._create_file_name(self.url)
         full_path = os.path.join(self.output, file_name)
 
         r = requests.get(self.url)
@@ -31,54 +33,54 @@ class URLDownloader:
         return file_name
 
     def images_download(self, index):
-        with open(os.path.join(self.output, index), "r") as f:
-            contents = f.read()
 
-        soup = BeautifulSoup(contents, 'html.parser')
+        # Получаем ссылки из тегов
+        image_links = self._parce_html(index, 'img')
 
-        # Парсим html и записываем все ссылки картинок в список
-        images = soup.find_all('img')
-        image_links = [
-            {'old_p': img['src'][1:]}
-            if img['src'].startswith('/')
-            else {'old_p': img['src']}
-            for img in images
-        ]
+        # Создаём папку
+        folder_name = self._create_folder()
 
-        # Создаем папку для файлов, если её нет
-        folder_name = self.create_file_name(self.url, 'files')
-        path_to_folder = os.path.join(self.output, folder_name)
-        if not os.path.exists(path_to_folder):
-            os.mkdir(path_to_folder)
-
-        # Скачиваем и переименовываем все картинки
-        for i in range(len(image_links)):
-            img_old_p = image_links[i]['old_p']
-            img_full_path = os.path.join(self.url, img_old_p)
-            ext = img_old_p[img_old_p.rfind(".") + 1:]
-
-            new_img_name = self.create_file_name(img_full_path, ext)
-
-            r = requests.get(img_full_path)
-
-            img_new_p = os.path.join(folder_name, new_img_name)
-            with open(os.path.join(self.output, img_new_p), "wb") as fi:
-                fi.write(r.content)
-
-            image_links[i]['new_p'] = img_new_p
+        # Скачиваем файлы
+        self._download_files(
+            image_links,
+            folder_name,
+            type='img'
+        )
 
         # Заменяем ссылки в HTML
-        new_soup = BeautifulSoup(contents, 'html.parser')
-        for link in image_links:
-            new_soup.img['src'] = (link['new_p'])
+        self._rewrite_links_html(index, image_links, type='img')
 
-        with open(os.path.join(self.output, index), "w") as f:
-            f.write(new_soup.prettify())
+    def css_download(self, index):
+        css_links = self._parce_html(index, type='css')
 
-    def files_download(self):
-        pass
+        folder_name = self._create_folder()
 
-    def create_file_name(self, url, ext='html'):
+        # Скачиваем файлы
+        self._download_files(
+            css_links,
+            folder_name,
+            type='css'
+        )
+
+        # Заменяем ссылки в HTML
+        self._rewrite_links_html(index, css_links, type='css')
+
+    def js_download(self, index):
+        js_links = self._parce_html(index, type='js')
+
+        folder_name = self._create_folder()
+
+        # Скачиваем файлы
+        self._download_files(
+            js_links,
+            folder_name,
+            type='js'
+        )
+
+        # Заменяем ссылки в HTML
+        self._rewrite_links_html(index, js_links, type='js')
+
+    def _create_file_name(self, url, ext='html'):
 
         # Отделяем схему (https://)
         file_name = re.search(r"(?<=^https:\/\/).+", url, flags=re.MULTILINE)
@@ -104,5 +106,99 @@ class URLDownloader:
 
         return file_name
 
-# downloader = URLDownloader('https://page-loader.hexlet.repl.co/', 'output')
-# page_name = downloader.page_download()
+    def _parce_html(self, index, type): # noqa
+        """Types: img | js | css
+
+        returns: list [{'old_p': <old_path>}]
+        """
+
+        with open(os.path.join(self.output, index), "r") as f:
+            contents = f.read()
+
+        # Парсим html и записываем все ссылки картинок в список
+        soup = BeautifulSoup(contents, 'html.parser')
+
+        if type == 'img':
+            tags = soup.find_all('img')
+            links = [
+                {'old_p': tag['src'][1:]}
+                if tag['src'].startswith('/')
+                else {'old_p': tag['src']}
+                for tag in tags
+            ]
+        elif type == 'css':
+            tags = soup.find_all('link')
+            links = []
+            for tag in tags:
+                if tag['rel'][0] == 'stylesheet':
+                    if tag['href'].startswith('/'):
+                        links.append({'old_p': tag['href'][1:]})
+                    else:
+                        links.append({'old_p': tag['href']})
+        elif type == 'js':
+            tags = soup.find_all('script')
+            links = []
+            for tag in tags:
+                if tag.has_attr('src'):
+                    if tag['src'].startswith('/'):
+                        links.append({'old_p': tag['src'][1:]})
+                    else:
+                        links.append({'old_p': tag['src']})
+
+        return links
+
+    def _create_folder(self):
+
+        # Создаем папку для файлов, если её нет
+        folder_name = self._create_file_name(self.url, 'files')
+        path_to_folder = os.path.join(self.output, folder_name)
+
+        if not os.path.exists(path_to_folder):
+            try:
+                os.mkdir(path_to_folder)
+            except Exception:
+                raise IsADirectoryError("Folder isn't created")
+
+        return folder_name
+
+    def _download_files(self, links, folder_name, type):
+        for i in range(len(links)):
+
+            # Old path, name
+            old_path = links[i]['old_p']
+            full_old_path = os.path.join(self.url, old_path)
+
+            ext = old_path[old_path.rfind(".") + 1:]
+
+            # New path, name
+            new_name = self._create_file_name(full_old_path, ext)
+            new_path = os.path.join(folder_name, new_name)
+
+            r = requests.get(full_old_path)
+            if type == 'img':
+                with open(os.path.join(self.output, new_path), 'wb') as f:
+                    f.write(r.content)
+            else:
+                with open(os.path.join(self.output, new_path), 'w') as f:
+                    f.write(r.text)
+
+            links[i]['new_p'] = new_path
+
+    def _rewrite_links_html(self, html, links, type): # noqa
+        with open(os.path.join(self.output, html), "r") as f:
+            contents = f.read()
+
+        # Заменяем ссылки в HTML
+        new_soup = BeautifulSoup(contents, 'html.parser')
+        if type == 'img':
+            for link in links:
+                new_soup.img['src'] = (link['new_p'])
+        elif type == 'css':
+            for link in links:
+                new_soup.link['href'] = (link['new_p'])
+        elif type == 'js':
+            for link in links:
+                new_soup.script['src'] = (link['new_p'])
+
+        with open(os.path.join(self.output, html), "w") as f:
+            f.write(new_soup.prettify())
