@@ -1,20 +1,25 @@
 import os
 import requests
 import re
-from urllib import parse as urllib
+import logging
 
+from urllib import parse as urllib
 from bs4 import BeautifulSoup
+
+logger = logging.getLogger("app.URLDownloader")
 
 
 class URLDownloader:
     """Class URLDownloader is used to download web pages by URL"""
 
     def __init__(self, url, output=os.getcwd()):
+        logger.debug('Initializing URLDownloader object')
         self.url = url
         self.output = output
         self.host = urllib.urlparse(url).netloc
 
     def download(self):
+        logger.debug('Start downloading web page')
         page_name = self.page_download()
         self.images_download(page_name)
         self.css_download(page_name)
@@ -25,15 +30,23 @@ class URLDownloader:
         file_name = self._create_file_name(self.url)
         full_path = os.path.join(self.output, file_name)
 
-        r = requests.get(self.url)
+        try:
+            r = requests.get(self.url)
+        except ConnectionError:
+            logger.error('ConnectionError')
 
-        with open(full_path, 'w+') as file:
-            file.write(r.text)
+        try:
+            with open(full_path, 'w+') as file:
+                file.write(r.text)
+        except OSError as e:
+            logger.error(f'Write file error: {e}')
+
+        logger.info(f'File {file_name} has been downloaded')
 
         return file_name
 
     def images_download(self, index):
-
+        logger.debug('Images downloading')
         # Получаем ссылки из тегов
         image_links = self._parce_html(index, 'img')
 
@@ -51,6 +64,7 @@ class URLDownloader:
         self._rewrite_links_html(index, image_links, type='img')
 
     def css_download(self, index):
+        logger.debug('CSS downloading')
         css_links = self._parce_html(index, type='css')
 
         folder_name = self._create_folder()
@@ -66,6 +80,7 @@ class URLDownloader:
         self._rewrite_links_html(index, css_links, type='css')
 
     def js_download(self, index):
+        logger.debug('JS downloading')
         js_links = self._parce_html(index, type='js')
 
         folder_name = self._create_folder()
@@ -111,9 +126,11 @@ class URLDownloader:
 
         returns: list [{'old_p': <old_path>}]
         """
-
-        with open(os.path.join(self.output, index), "r") as f:
-            contents = f.read()
+        try:
+            with open(os.path.join(self.output, index), "r") as f:
+                contents = f.read()
+        except OSError as e:
+            logger.critical(f'File read Error: {e}')
 
         # Парсим html и записываем все ссылки картинок в список
         soup = BeautifulSoup(contents, 'html.parser')
@@ -156,7 +173,8 @@ class URLDownloader:
         if not os.path.exists(path_to_folder):
             try:
                 os.mkdir(path_to_folder)
-            except Exception:
+            except Exception as e:
+                logger.critical(f'Directory create error: {e}')
                 raise IsADirectoryError("Folder isn't created")
 
         return folder_name
@@ -174,7 +192,11 @@ class URLDownloader:
             new_name = self._create_file_name(full_old_path, ext)
             new_path = os.path.join(folder_name, new_name)
 
-            r = requests.get(full_old_path)
+            try:
+                r = requests.get(full_old_path)
+            except ConnectionError:
+                logger.error('ConnectionError')
+
             if type == 'img':
                 with open(os.path.join(self.output, new_path), 'wb') as f:
                     f.write(r.content)
@@ -185,8 +207,11 @@ class URLDownloader:
             links[i]['new_p'] = new_path
 
     def _rewrite_links_html(self, html, links, type): # noqa
-        with open(os.path.join(self.output, html), "r") as f:
-            contents = f.read()
+        try:
+            with open(os.path.join(self.output, html), "r") as f:
+                contents = f.read()
+        except OSError as e:
+            logger.critical(f'File read Error: {e}')
 
         # Заменяем ссылки в HTML
         new_soup = BeautifulSoup(contents, 'html.parser')

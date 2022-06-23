@@ -1,12 +1,16 @@
 #!/usr/bin/env python
 import argparse
 import os
+import logging
+import logging.config
+import json
 
 from page_loader.URLDownloader import URLDownloader  # noqa
 
 
 def main():
     """This programm safe url page on disk"""
+    logger.debug('Start program page_loader')
 
     parser = argparse.ArgumentParser(description='Safe URL Page')
     parser.add_argument('url')
@@ -28,6 +32,18 @@ def main():
     downloader.js_download(page_name)
 
     print(page_name)
+
+    logger.debug('Stop programm')
+
+
+def get_logging_dict_config():
+    with open('logs/conf.json') as conf:
+        log_config = conf.read()
+    return json.loads(log_config)
+
+
+logging.config.dictConfig(get_logging_dict_config())
+logger = logging.getLogger('app')
 
 
 if __name__ == '__main__':
