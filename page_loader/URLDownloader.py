@@ -1,6 +1,7 @@
 import os
 import requests
 import re
+from urllib import parse as urllib
 
 from bs4 import BeautifulSoup
 
@@ -11,8 +12,7 @@ class URLDownloader:
     def __init__(self, url, output=os.getcwd()):
         self.url = url
         self.output = output
-        host = ''
-        self.host = host
+        self.host = urllib.urlparse(url).netloc
 
     def download(self):
         page_name = self.page_download()
@@ -106,7 +106,7 @@ class URLDownloader:
 
         return file_name
 
-    def _parce_html(self, index, type): # noqa
+    def _parce_html(self, index, type):  # noqa: C901
         """Types: img | js | css
 
         returns: list [{'old_p': <old_path>}]

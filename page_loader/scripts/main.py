@@ -2,7 +2,7 @@
 import argparse
 import os
 
-from URLDownloader import URLDownloader  # noqa
+from page_loader.URLDownloader import URLDownloader  # noqa
 
 
 def main():
