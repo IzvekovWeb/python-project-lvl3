@@ -1,10 +1,9 @@
-from URLDownloader import URLDownloader
+from page_loader.URLDownloader import URLDownloader
 
 import tempfile
 import requests_mock
 import os
 import shutil
-
 
 
 def test_download_images(requests_mock):
@@ -34,6 +33,7 @@ def test_download_images(requests_mock):
     
     assert result == tmp_result
 
+
 def test_download_css(requests_mock):
 
     with open('tests/fixtures/css_result.css', 'r') as fixture:
@@ -58,6 +58,7 @@ def test_download_css(requests_mock):
     tmp_result = str(tmp_result)
     
     assert result == tmp_result
+
 
 def test_download_js(requests_mock):
 

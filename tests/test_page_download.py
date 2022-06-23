@@ -2,10 +2,8 @@ import tempfile
 import requests_mock
 import os
 
-from URLDownloader import URLDownloader
+from page_loader.URLDownloader import URLDownloader
 from page_loader.page_loader import download
-
-
 
 
 def test_page_download(requests_mock):
