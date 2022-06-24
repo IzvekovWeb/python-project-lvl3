@@ -13,14 +13,20 @@
         },
         "file": {
             "class": "logging.FileHandler",
-            "level": "DEBUG",
+            "level": "ERROR",
             "formatter": "detailed",
             "filename": "logs/loader.log"
+        },
+        "file_info": {
+            "class": "logging.FileHandler",
+            "level": "INFO",
+            "formatter": "detailed",
+            "filename": "logs/file_info.log"
         }
     },
     "loggers": {
         "app": {
-            "handlers": ["std", "file"],
+            "handlers": ["std", "file", "file_info"],
             "level": "DEBUG"
         }
     }

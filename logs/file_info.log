@@ -1,0 +1,10 @@
+2022-06-24 18:57:38,621 :: app.URLDownloader:45 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
+2022-06-24 18:57:38,642 :: app.URLDownloader:153 - INFO - IMG links successfully parsed
+2022-06-24 18:57:39,308 :: app.URLDownloader:217 - INFO - Image seccsesfully downloaded
+2022-06-24 18:57:39,329 :: app.URLDownloader:253 - INFO - Links rewrited
+2022-06-24 18:57:39,339 :: app.URLDownloader:163 - INFO - CSS links successfully parsed
+2022-06-24 18:57:40,556 :: app.URLDownloader:224 - INFO - css file seccsesfully downloaded
+2022-06-24 18:57:40,586 :: app.URLDownloader:253 - INFO - Links rewrited
+2022-06-24 18:57:40,603 :: app.URLDownloader:173 - INFO - JS links successfully parsed
+2022-06-24 18:57:41,114 :: app.URLDownloader:224 - INFO - js file seccsesfully downloaded
+2022-06-24 18:57:41,145 :: app.URLDownloader:253 - INFO - Links rewrited

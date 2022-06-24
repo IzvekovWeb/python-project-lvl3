@@ -1,4 +1,4 @@
-from page_loader.URLDownloader import URLDownloader
+from URLDownloader import URLDownloader
 
 
 def test_create_file_name():

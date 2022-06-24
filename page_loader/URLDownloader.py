@@ -2,9 +2,12 @@ import os
 import requests
 import re
 import logging
+import sys
 
 from urllib import parse as urllib
 from bs4 import BeautifulSoup
+
+from requests.exceptions import ConnectionError
 
 logger = logging.getLogger("app.URLDownloader")
 
@@ -33,15 +36,16 @@ class URLDownloader:
         try:
             r = requests.get(self.url)
         except ConnectionError:
-            logger.error('ConnectionError')
+            logger.critical("Requests: ConnectionError")
+            sys.exit(50)
 
         try:
             with open(full_path, 'w+') as file:
                 file.write(r.text)
+            logger.info(f'File {file_name} has been downloaded')
         except OSError as e:
             logger.error(f'Write file error: {e}')
-
-        logger.info(f'File {file_name} has been downloaded')
+            sys.exit(40)
 
         return file_name
 
@@ -129,8 +133,10 @@ class URLDownloader:
         try:
             with open(os.path.join(self.output, index), "r") as f:
                 contents = f.read()
+            logger.debug('Request is done')
         except OSError as e:
             logger.critical(f'File read Error: {e}')
+            sys.exit(50)
 
         # Парсим html и записываем все ссылки картинок в список
         soup = BeautifulSoup(contents, 'html.parser')
@@ -143,6 +149,7 @@ class URLDownloader:
                 else {'old_p': tag['src']}
                 for tag in tags
             ]
+            logger.info('IMG links successfully parsed')
         elif type == 'css':
             tags = soup.find_all('link')
             links = []
@@ -152,6 +159,7 @@ class URLDownloader:
                         links.append({'old_p': tag['href'][1:]})
                     else:
                         links.append({'old_p': tag['href']})
+            logger.info('CSS links successfully parsed')
         elif type == 'js':
             tags = soup.find_all('script')
             links = []
@@ -161,6 +169,7 @@ class URLDownloader:
                         links.append({'old_p': tag['src'][1:]})
                     else:
                         links.append({'old_p': tag['src']})
+            logger.info('JS links successfully parsed')
 
         return links
 
@@ -173,13 +182,14 @@ class URLDownloader:
         if not os.path.exists(path_to_folder):
             try:
                 os.mkdir(path_to_folder)
+                logger.info(f'Folder {folder_name} created')
             except Exception as e:
                 logger.critical(f'Directory create error: {e}')
                 raise IsADirectoryError("Folder isn't created")
 
         return folder_name
 
-    def _download_files(self, links, folder_name, type):
+    def _download_files(self, links, folder_name, type):  # noqa: C901
         for i in range(len(links)):
 
             # Old path, name
@@ -194,15 +204,25 @@ class URLDownloader:
 
             try:
                 r = requests.get(full_old_path)
+                logger.debug('Request is done')
             except ConnectionError:
-                logger.error('ConnectionError')
+                logger.critical('ConnectionError')
+                sys.exit(50)
 
             if type == 'img':
-                with open(os.path.join(self.output, new_path), 'wb') as f:
-                    f.write(r.content)
+                try:
+                    with open(os.path.join(self.output, new_path), 'wb') as f:
+                        f.write(r.content)
+                    logger.info('Image seccsesfully downloaded')
+                except OSError as e:
+                    logger.error(f'File write Error: {e}')
             else:
-                with open(os.path.join(self.output, new_path), 'w') as f:
-                    f.write(r.text)
+                try:
+                    with open(os.path.join(self.output, new_path), 'w') as f:
+                        f.write(r.text)
+                    logger.info(f'{type} file seccsesfully downloaded')
+                except OSError as e:
+                    logger.error(f'File write Error: {e}')
 
             links[i]['new_p'] = new_path
 
@@ -210,8 +230,10 @@ class URLDownloader:
         try:
             with open(os.path.join(self.output, html), "r") as f:
                 contents = f.read()
+            logger.debug('Request is done')
         except OSError as e:
             logger.critical(f'File read Error: {e}')
+            sys.exit(50)
 
         # Заменяем ссылки в HTML
         new_soup = BeautifulSoup(contents, 'html.parser')
@@ -224,6 +246,10 @@ class URLDownloader:
         elif type == 'js':
             for link in links:
                 new_soup.script['src'] = (link['new_p'])
-
-        with open(os.path.join(self.output, html), "w") as f:
-            f.write(new_soup.prettify())
+        try:
+            with open(os.path.join(self.output, html), "w") as f:
+                f.write(new_soup.prettify())
+            logger.info('Links rewrited')
+        except OSError as e:
+            logger.error(f'File write Error: {e}')
+            sys.exit(40)

@@ -1,7 +1,0 @@
-2022-06-23 17:06:05,311 :: app:13 - DEBUG - Start program page_loader
-2022-06-23 17:06:05,313 :: app.URLDownloader:15 - DEBUG - Initializing URLDownloader object
-2022-06-23 17:06:06,380 :: app.URLDownloader:43 - INFO - File ru-hexlet-io-courses.html has been downloaded
-2022-06-23 17:06:06,383 :: app.URLDownloader:48 - DEBUG - Images downloading
-2022-06-23 17:06:07,163 :: app.URLDownloader:66 - DEBUG - CSS downloading
-2022-06-23 17:06:07,845 :: app.URLDownloader:82 - DEBUG - JS downloading
-2022-06-23 17:06:08,352 :: app:37 - DEBUG - Stop programm

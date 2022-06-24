@@ -1,9 +1,15 @@
 import tempfile
+
 import requests_mock
 import os
+import pytest
 
-from page_loader.URLDownloader import URLDownloader
-from page_loader.page_loader import download
+from mock import patch
+
+from URLDownloader import URLDownloader
+from page_loader import download
+
+from requests.exceptions import ConnectionError
 
 
 def test_page_download(requests_mock):
@@ -24,3 +30,11 @@ def test_page_download(requests_mock):
             tmp_result = tmp.read()
 
     assert result == tmp_result
+
+
+def test_page_download_request_e():
+    downloader = URLDownloader('https://some_fackeUrl_12', 'output')
+    
+    with pytest.raises(SystemExit):
+        with pytest.raises(ConnectionError):
+            downloader.page_download()

@@ -4,8 +4,9 @@ import os
 import logging
 import logging.config
 import json
+import sys
 
-from page_loader.URLDownloader import URLDownloader  # noqa
+from URLDownloader import URLDownloader  # noqa
 
 
 def main():
@@ -34,6 +35,7 @@ def main():
     print(page_name)
 
     logger.debug('Stop programm')
+    sys.exit()
 
 
 def get_logging_dict_config():
@@ -45,6 +47,10 @@ def get_logging_dict_config():
 logging.config.dictConfig(get_logging_dict_config())
 logger = logging.getLogger('app')
 
+logging.getLogger('urllib3').setLevel('CRITICAL')
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception:
+        sys.exit()

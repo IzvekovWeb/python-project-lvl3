@@ -1,4 +1,4 @@
-from page_loader.URLDownloader import URLDownloader
+from URLDownloader import URLDownloader
 
 import tempfile
 import requests_mock
