@@ -15,3 +15,7 @@
     page-loader [--output <path>] <url>
 
 [![asciicast](https://asciinema.org/a/u21gtOZNugMc0xG3U8FaRSi1H.svg)](https://asciinema.org/a/u21gtOZNugMc0xG3U8FaRSi1H)
+
+### Прогресс бар
+
+[![asciicast](https://asciinema.org/a/5wxRuAZoxqMEP0au9RmDfqwYY.svg)](https://asciinema.org/a/5wxRuAZoxqMEP0au9RmDfqwYY)

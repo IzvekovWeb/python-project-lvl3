@@ -82,3 +82,24 @@
 2022-06-25 11:31:26,499 :: app.URLDownloader:173 - INFO - JS links successfully parsed
 2022-06-25 11:31:27,160 :: app.URLDownloader:227 - INFO - js file seccsesfully downloaded
 2022-06-25 11:31:27,191 :: app.URLDownloader:258 - INFO - Links rewrited
+2022-06-25 11:41:28,368 :: app.URLDownloader:46 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
+2022-06-25 11:41:28,381 :: app.URLDownloader:153 - INFO - IMG links successfully parsed
+2022-06-25 11:41:28,963 :: app.URLDownloader:220 - INFO - Image seccsesfully downloaded
+2022-06-25 11:41:28,983 :: app.URLDownloader:258 - INFO - Links rewrited
+2022-06-25 11:41:28,994 :: app.URLDownloader:163 - INFO - CSS links successfully parsed
+2022-06-25 11:41:29,793 :: app.URLDownloader:227 - INFO - css file seccsesfully downloaded
+2022-06-25 11:41:29,834 :: app.URLDownloader:258 - INFO - Links rewrited
+2022-06-25 11:41:29,860 :: app.URLDownloader:173 - INFO - JS links successfully parsed
+2022-06-25 11:41:30,614 :: app.URLDownloader:227 - INFO - js file seccsesfully downloaded
+2022-06-25 11:41:30,656 :: app.URLDownloader:258 - INFO - Links rewrited
+2022-06-25 11:43:36,144 :: app.URLDownloader:46 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
+2022-06-25 11:43:36,160 :: app.URLDownloader:153 - INFO - IMG links successfully parsed
+2022-06-25 11:43:36,171 :: app.URLDownloader:186 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-25 11:43:37,683 :: app.URLDownloader:220 - INFO - Image seccsesfully downloaded
+2022-06-25 11:43:37,714 :: app.URLDownloader:258 - INFO - Links rewrited
+2022-06-25 11:43:37,732 :: app.URLDownloader:163 - INFO - CSS links successfully parsed
+2022-06-25 11:43:39,323 :: app.URLDownloader:227 - INFO - css file seccsesfully downloaded
+2022-06-25 11:43:39,356 :: app.URLDownloader:258 - INFO - Links rewrited
+2022-06-25 11:43:39,375 :: app.URLDownloader:173 - INFO - JS links successfully parsed
+2022-06-25 11:43:40,962 :: app.URLDownloader:227 - INFO - js file seccsesfully downloaded
+2022-06-25 11:43:41,001 :: app.URLDownloader:258 - INFO - Links rewrited
