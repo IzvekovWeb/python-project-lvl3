@@ -1,9 +1,9 @@
-from URLDownloader import URLDownloader
-
 import tempfile
 import requests_mock
 import os
 import shutil
+
+from page_downloader.URLDownloader import URLDownloader
 
 
 def test_download_images(requests_mock):

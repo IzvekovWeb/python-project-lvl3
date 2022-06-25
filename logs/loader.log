@@ -1,1 +1,3 @@
-2022-06-25 11:29:54,753 :: app.URLDownloader:48 - ERROR - Write file error: [Errno 2] No such file or directory: 'output/page-loader-hexlet-repl-co-.html'
+2022-06-25 12:08:54,566 :: app.URLDownloader:40 - CRITICAL - Requests: ConnectionError
+2022-06-25 12:09:18,372 :: app.URLDownloader:40 - CRITICAL - Requests: ConnectionError
+2022-06-25 12:10:31,003 :: app.URLDownloader:40 - CRITICAL - Requests: ConnectionError

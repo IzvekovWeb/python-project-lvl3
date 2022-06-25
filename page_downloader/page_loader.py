@@ -1,5 +1,5 @@
 import os
-from URLDownloader import URLDownloader
+from page_downloader.URLDownloader import URLDownloader
 
 
 def download(url, output=os.getcwd()):

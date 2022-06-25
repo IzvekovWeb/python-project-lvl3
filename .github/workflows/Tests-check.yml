@@ -33,7 +33,11 @@ jobs:
       - name: Run Lint
         run: poetry run flake8 page_loader
 
+      - name: Build package
+        run: poetry build
 
+      - name: Install package
+        run: python3 -m pip install --force-reinstall dist/*.whl
 
       - name: Test & publish code coverage
         uses: paambaati/codeclimate-action@v3.0.0

@@ -7,7 +7,7 @@ import json
 import sys
 
 from progress.bar import Bar
-from URLDownloader import URLDownloader  # noqa
+from page_downloader.URLDownloader import URLDownloader  # noqa
 
 
 def main():
@@ -38,6 +38,7 @@ def main():
     downloader.js_download(page_name)
     bar.next()
     bar.finish()
+
     print(page_name)
 
     logger.debug('Stop programm')

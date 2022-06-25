@@ -18,15 +18,15 @@ package-install:
 
 # Проверка на lint
 lint:
-	poetry run flake8 page_loader
+	poetry run flake8 page_downloader
 
 test:
 	poetry run pytest
 
 test-coverage:
-	poetry run pytest --cov=page_loader 
+	poetry run pytest --cov=page_downloader 
 
 test-coverage-xml:
-	poetry run pytest --cov=page_loader --cov-report xml
+	poetry run pytest --cov=page_downloader --cov-report xml
 
 .PHONY: install test lint selfcheck check build page-loader
