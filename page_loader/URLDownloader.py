@@ -2,7 +2,6 @@ import os
 import requests
 import re
 import logging
-import sys
 
 from progress.bar import Bar
 from urllib import parse as urllib
