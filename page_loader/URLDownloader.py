@@ -38,7 +38,7 @@ class URLDownloader:
             r = requests.get(self.url)
         except ConnectionError:
             logger.critical("Requests: ConnectionError")
-            sys.exit(50)
+            raise ConnectionError
 
         try:
             with open(full_path, 'w+') as file:
@@ -46,7 +46,7 @@ class URLDownloader:
             logger.info(f'File {file_name} has been downloaded')
         except OSError as e:
             logger.error(f'Write file error: {e}')
-            sys.exit(40)
+            raise OSError
 
         return file_name
 
@@ -137,7 +137,7 @@ class URLDownloader:
             logger.debug('Request is done')
         except OSError as e:
             logger.critical(f'File read Error: {e}')
-            sys.exit(50)
+            raise OSError
 
         # Парсим html и записываем все ссылки картинок в список
         soup = BeautifulSoup(contents, 'html.parser')
@@ -211,7 +211,7 @@ class URLDownloader:
                 logger.debug('Request is done')
             except ConnectionError:
                 logger.critical('ConnectionError')
-                sys.exit(50)
+                raise ConnectionError
 
             if type == 'img':
                 try:
@@ -239,7 +239,7 @@ class URLDownloader:
             logger.debug('Request is done')
         except OSError as e:
             logger.critical(f'File read Error: {e}')
-            sys.exit(50)
+            raise OSError
 
         # Заменяем ссылки в HTML
         new_soup = BeautifulSoup(contents, 'html.parser')
@@ -258,4 +258,4 @@ class URLDownloader:
             logger.info('Links rewrited')
         except OSError as e:
             logger.error(f'File write Error: {e}')
-            sys.exit(40)
+            raise OSError
