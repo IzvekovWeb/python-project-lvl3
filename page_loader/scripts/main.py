@@ -6,11 +6,13 @@ import logging.config
 import json
 import sys
 
+from progress.bar import Bar
 from URLDownloader import URLDownloader  # noqa
 
 
 def main():
     """This programm safe url page on disk"""
+
     logger.debug('Start program page_loader')
 
     parser = argparse.ArgumentParser(description='Safe URL Page')
@@ -23,15 +25,19 @@ def main():
         help='set path to save')
 
     args = parser.parse_args()
+    bar = Bar('Processing', max=5)
 
     downloader = URLDownloader(args.url, args.output)
-
+    bar.next()
     page_name = downloader.page_download()
-
+    bar.next()
     downloader.images_download(page_name)
+    bar.next()
     downloader.css_download(page_name)
+    bar.next()
     downloader.js_download(page_name)
-
+    bar.next()
+    bar.finish()
     print(page_name)
 
     logger.debug('Stop programm')

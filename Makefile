@@ -4,8 +4,8 @@ install:
 
 # Запуск программ
 page-loader:
-# poetry run page-loader --output output 'https://page-loader.hexlet.repl.co/'
-	poetry run page-loader --output output 'https://ru.hexlet.io/courses'
+	poetry run page-loader --output output 'https://page-loader.hexlet.repl.co/'
+# poetry run page-loader --output output 'https://ru.hexlet.io/courses'
 	
 
 # Сборка проекта в whl файл

@@ -4,6 +4,7 @@ import re
 import logging
 import sys
 
+from progress.bar import Bar
 from urllib import parse as urllib
 from bs4 import BeautifulSoup
 
@@ -190,6 +191,9 @@ class URLDownloader:
         return folder_name
 
     def _download_files(self, links, folder_name, type):  # noqa: C901
+
+        bar = Bar(f'Downloading {type}', max=len(links))
+
         for i in range(len(links)):
 
             # Old path, name
@@ -225,6 +229,8 @@ class URLDownloader:
                     logger.error(f'File write Error: {e}')
 
             links[i]['new_p'] = new_path
+            bar.next()
+        bar.finish()
 
     def _rewrite_links_html(self, html, links, type): # noqa
         try:
