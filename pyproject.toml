@@ -5,7 +5,7 @@ description = "Hexlet project #3"
 authors = ["Alexander Izvekov <izvekov.web@yandex.ru>"]
 license = "MIT"
 packages = [
-  { include = "page_downloader" }
+  { include = "page_loader" }
 ]
 
 [tool.poetry.dependencies]
@@ -14,7 +14,7 @@ bs4 = "^0.0.1"
 progress = "^1.6"
 
 [tool.poetry.scripts]
-page-loader = "page_downloader.scripts.main:main"
+page-loader = "page_loader.scripts.main:main"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^4.0.1"

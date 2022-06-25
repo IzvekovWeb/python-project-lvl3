@@ -3,7 +3,7 @@ import requests_mock
 import os
 import shutil
 
-from page_downloader.URLDownloader import URLDownloader
+from page_loader.URLDownloader import URLDownloader
 
 
 def test_download_images(requests_mock):

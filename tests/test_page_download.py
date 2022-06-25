@@ -6,8 +6,8 @@ import pytest
 
 from mock import patch
 
-from page_downloader.URLDownloader import URLDownloader
-from page_downloader.page_loader import download
+from page_loader.URLDownloader import URLDownloader
+from page_loader import download
 
 from requests.exceptions import ConnectionError
 

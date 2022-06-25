@@ -31,7 +31,7 @@ jobs:
         run: poetry install
 
       - name: Run Lint
-        run: poetry run flake8 page_downloader
+        run: poetry run flake8 page_loader
 
       - name: Build package
         run: poetry build

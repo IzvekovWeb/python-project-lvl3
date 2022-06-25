@@ -7,7 +7,7 @@ import json
 import sys
 
 from progress.bar import Bar
-from page_downloader.URLDownloader import URLDownloader  # noqa
+from page_loader.URLDownloader import URLDownloader  # noqa
 
 
 def main():
