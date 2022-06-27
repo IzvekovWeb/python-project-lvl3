@@ -70,3 +70,85 @@
 2022-06-25 15:56:15,378 :: app.URLDownloader:258 - INFO - Links rewrited
 2022-06-25 15:56:15,431 :: app.URLDownloader:46 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
 2022-06-25 15:56:17,578 :: app.URLDownloader:40 - CRITICAL - Requests: ConnectionError
+2022-06-27 11:13:31,777 :: app.URLDownloader:152 - INFO - IMG links successfully parsed
+2022-06-27 11:13:31,781 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 11:13:31,790 :: app.URLDownloader:219 - INFO - Image seccsesfully downloaded
+2022-06-27 11:13:31,793 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 11:13:31,831 :: app.URLDownloader:162 - INFO - CSS links successfully parsed
+2022-06-27 11:13:31,832 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 11:13:31,835 :: app.URLDownloader:226 - INFO - css file seccsesfully downloaded
+2022-06-27 11:13:31,839 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 11:13:31,876 :: app.URLDownloader:172 - INFO - JS links successfully parsed
+2022-06-27 11:13:31,877 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 11:13:31,880 :: app.URLDownloader:226 - INFO - js file seccsesfully downloaded
+2022-06-27 11:13:31,883 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 11:13:31,930 :: app.URLDownloader:45 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
+2022-06-27 11:13:34,023 :: app.URLDownloader:39 - CRITICAL - Requests: ConnectionError
+2022-06-27 11:14:02,736 :: app.URLDownloader:152 - INFO - IMG links successfully parsed
+2022-06-27 11:14:02,737 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 11:14:02,741 :: app.URLDownloader:219 - INFO - Image seccsesfully downloaded
+2022-06-27 11:14:02,744 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 11:14:02,775 :: app.URLDownloader:162 - INFO - CSS links successfully parsed
+2022-06-27 11:14:02,776 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 11:14:02,779 :: app.URLDownloader:226 - INFO - css file seccsesfully downloaded
+2022-06-27 11:14:02,782 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 11:14:02,814 :: app.URLDownloader:172 - INFO - JS links successfully parsed
+2022-06-27 11:14:02,815 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 11:14:02,820 :: app.URLDownloader:226 - INFO - js file seccsesfully downloaded
+2022-06-27 11:14:02,822 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 11:14:02,848 :: app.URLDownloader:45 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
+2022-06-27 11:14:04,948 :: app.URLDownloader:39 - CRITICAL - Requests: ConnectionError
+2022-06-27 11:14:42,462 :: app.URLDownloader:152 - INFO - IMG links successfully parsed
+2022-06-27 11:14:42,465 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 11:14:42,561 :: app.URLDownloader:219 - INFO - Image seccsesfully downloaded
+2022-06-27 11:14:42,565 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 11:14:42,590 :: app.URLDownloader:162 - INFO - CSS links successfully parsed
+2022-06-27 11:14:42,591 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 11:14:42,595 :: app.URLDownloader:226 - INFO - css file seccsesfully downloaded
+2022-06-27 11:14:42,602 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 11:14:42,631 :: app.URLDownloader:172 - INFO - JS links successfully parsed
+2022-06-27 11:14:42,633 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 11:14:42,642 :: app.URLDownloader:226 - INFO - js file seccsesfully downloaded
+2022-06-27 11:14:42,646 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 11:14:42,689 :: app.URLDownloader:45 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
+2022-06-27 11:14:44,833 :: app.URLDownloader:39 - CRITICAL - Requests: ConnectionError
+2022-06-27 11:47:54,937 :: app.URLDownloader:152 - INFO - IMG links successfully parsed
+2022-06-27 11:47:54,938 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 11:47:54,950 :: app.URLDownloader:219 - INFO - Image seccsesfully downloaded
+2022-06-27 11:47:54,957 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 11:47:54,996 :: app.URLDownloader:162 - INFO - CSS links successfully parsed
+2022-06-27 11:47:54,996 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 11:47:54,999 :: app.URLDownloader:226 - INFO - css file seccsesfully downloaded
+2022-06-27 11:47:55,001 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 11:47:55,031 :: app.URLDownloader:172 - INFO - JS links successfully parsed
+2022-06-27 11:47:55,031 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 11:47:55,036 :: app.URLDownloader:226 - INFO - js file seccsesfully downloaded
+2022-06-27 11:47:55,038 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 11:47:57,189 :: app.URLDownloader:39 - CRITICAL - Requests: ConnectionError
+2022-06-27 12:33:43,271 :: app.URLDownloader:152 - INFO - IMG links successfully parsed
+2022-06-27 12:33:43,272 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 12:33:43,335 :: app.URLDownloader:219 - INFO - Image seccsesfully downloaded
+2022-06-27 12:33:43,337 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 12:33:43,365 :: app.URLDownloader:162 - INFO - CSS links successfully parsed
+2022-06-27 12:33:43,366 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 12:33:43,369 :: app.URLDownloader:226 - INFO - css file seccsesfully downloaded
+2022-06-27 12:33:43,371 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 12:33:43,401 :: app.URLDownloader:172 - INFO - JS links successfully parsed
+2022-06-27 12:33:43,402 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 12:33:43,404 :: app.URLDownloader:226 - INFO - js file seccsesfully downloaded
+2022-06-27 12:33:43,407 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 12:33:45,671 :: app.URLDownloader:39 - CRITICAL - Requests: ConnectionError
+2022-06-27 12:34:05,003 :: app.URLDownloader:152 - INFO - IMG links successfully parsed
+2022-06-27 12:34:05,004 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 12:34:05,106 :: app.URLDownloader:219 - INFO - Image seccsesfully downloaded
+2022-06-27 12:34:05,109 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 12:34:05,146 :: app.URLDownloader:162 - INFO - CSS links successfully parsed
+2022-06-27 12:34:05,147 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 12:34:05,150 :: app.URLDownloader:226 - INFO - css file seccsesfully downloaded
+2022-06-27 12:34:05,153 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 12:34:05,183 :: app.URLDownloader:172 - INFO - JS links successfully parsed
+2022-06-27 12:34:05,184 :: app.URLDownloader:185 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-27 12:34:05,187 :: app.URLDownloader:226 - INFO - js file seccsesfully downloaded
+2022-06-27 12:34:05,190 :: app.URLDownloader:257 - INFO - Links rewrited
+2022-06-27 12:34:05,228 :: app.URLDownloader:45 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
+2022-06-27 12:34:07,460 :: app.URLDownloader:39 - CRITICAL - Requests: ConnectionError

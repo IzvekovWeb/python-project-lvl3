@@ -14,7 +14,7 @@ from requests.exceptions import ConnectionError
 
 def test_page_download(requests_mock):
     with open('tests/fixtures/loader_result.html') as fixture:
-        result = fixture.read()
+        result = fixture.read()\
 
     requests_mock.get('https://page-loader.hexlet.repl.co/', text=result)
 
@@ -35,6 +35,6 @@ def test_page_download(requests_mock):
 def test_page_download_request_e():
     downloader = URLDownloader('https://some_fackeUrl_12', 'output')
     
-    with pytest.raises(SystemExit):
-        with pytest.raises(ConnectionError):
-            downloader.page_download()
+    
+    with pytest.raises(ConnectionError):
+        downloader.page_download()
