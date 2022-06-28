@@ -138,38 +138,39 @@ class URLDownloader:
             logger.critical(f'File read Error: {e}')
             raise OSError
 
-        # Парсим html и записываем все ссылки картинок в список
+        logger.info(f"Start parce '{type}' files")
+        #  Создаём парсер
         soup = BeautifulSoup(contents, 'html.parser')
 
+        # Парсим ссылки нужных файлов
         if type == 'img':
             tags = soup.find_all('img')
-            links = [
-                {'old_p': tag['src'][1:]}
-                if tag['src'].startswith('/')
-                else {'old_p': tag['src']}
-                for tag in tags
-            ]
-            logger.info('IMG links successfully parsed')
+            attr = 'src'
         elif type == 'css':
             tags = soup.find_all('link')
-            links = []
-            for tag in tags:
-                if tag['rel'][0] == 'stylesheet':
-                    if tag['href'].startswith('/'):
-                        links.append({'old_p': tag['href'][1:]})
-                    else:
-                        links.append({'old_p': tag['href']})
-            logger.info('CSS links successfully parsed')
+            tags = list(filter(lambda x: x.has_attr('rel') and x['rel'][0] == 'stylesheet', tags))  # noqa
+            attr = 'href'
         elif type == 'js':
             tags = soup.find_all('script')
-            links = []
-            for tag in tags:
-                if tag.has_attr('src'):
-                    if tag['src'].startswith('/'):
-                        links.append({'old_p': tag['src'][1:]})
-                    else:
-                        links.append({'old_p': tag['src']})
-            logger.info('JS links successfully parsed')
+            tags = list(filter(lambda x: x.has_attr('src'), tags))
+            attr = 'src'
+        else:
+            raise TypeError('Wrong file type')
+
+        links = []
+        for tag in tags:
+
+            current_host = urllib.urlparse(tag[attr]).netloc
+
+            if current_host != self.host and current_host != '':
+                continue
+
+            if tag[attr].startswith('/'):
+                links.append({'old_p': tag[attr][1:]})
+            else:
+                links.append({'old_p': tag[attr]})
+
+        logger.info(f"'{type}' files seccesfully parcerd")
 
         return links
 
