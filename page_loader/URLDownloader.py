@@ -22,11 +22,19 @@ class URLDownloader:
         self.host = urllib.urlparse(url).netloc
 
     def download(self):
+
+        main_bar = Bar('Processing', max=4)
         logger.debug('Start downloading web page')
         page_name = self.page_download()
+        main_bar.next()
         self.images_download(page_name)
+        main_bar.next()
         self.css_download(page_name)
+        main_bar.next()
         self.js_download(page_name)
+        main_bar.next()
+        main_bar.finish()
+
         return page_name
 
     def page_download(self):

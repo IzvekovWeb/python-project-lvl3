@@ -4,8 +4,6 @@ import requests_mock
 import os
 import pytest
 
-from mock import patch
-
 from page_loader.URLDownloader import URLDownloader
 from page_loader import download
 
