@@ -1,4 +1,4 @@
-from page_loader.scripts.main import get_logging_dict_config
+from page_loader.loader import get_logging_dict_config
 
 def test_get_logging_dict_config():
 
