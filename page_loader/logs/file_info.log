@@ -219,3 +219,50 @@
 2022-06-30 12:27:38,266 :: app.URLDownloader:266 - INFO - Links rewrited
 2022-06-30 12:27:38,299 :: app.URLDownloader:53 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
 2022-06-30 12:27:40,432 :: app.URLDownloader:47 - CRITICAL - Requests: ConnectionError
+2022-06-30 13:07:04,291 :: app.URLDownloader:149 - INFO - Start parce 'img' files
+2022-06-30 13:07:04,293 :: app.URLDownloader:181 - INFO - 'img' files seccesfully parcerd
+2022-06-30 13:07:04,294 :: app.URLDownloader:194 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-30 13:07:04,305 :: app.URLDownloader:228 - INFO - Image seccsesfully downloaded
+2022-06-30 13:07:04,308 :: app.URLDownloader:266 - INFO - Links rewrited
+2022-06-30 13:07:04,348 :: app.URLDownloader:149 - INFO - Start parce 'css' files
+2022-06-30 13:07:04,349 :: app.URLDownloader:181 - INFO - 'css' files seccesfully parcerd
+2022-06-30 13:07:04,349 :: app.URLDownloader:194 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-30 13:07:04,353 :: app.URLDownloader:235 - INFO - css file seccsesfully downloaded
+2022-06-30 13:07:04,355 :: app.URLDownloader:266 - INFO - Links rewrited
+2022-06-30 13:07:04,388 :: app.URLDownloader:149 - INFO - Start parce 'js' files
+2022-06-30 13:07:04,389 :: app.URLDownloader:181 - INFO - 'js' files seccesfully parcerd
+2022-06-30 13:07:04,390 :: app.URLDownloader:194 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-30 13:07:04,392 :: app.URLDownloader:235 - INFO - js file seccsesfully downloaded
+2022-06-30 13:07:04,399 :: app.URLDownloader:266 - INFO - Links rewrited
+2022-06-30 13:07:06,520 :: app.URLDownloader:53 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
+2022-06-30 13:07:08,651 :: app.URLDownloader:47 - CRITICAL - Requests: ConnectionError
+2022-06-30 13:07:35,896 :: app.URLDownloader:149 - INFO - Start parce 'img' files
+2022-06-30 13:07:35,898 :: app.URLDownloader:181 - INFO - 'img' files seccesfully parcerd
+2022-06-30 13:07:35,899 :: app.URLDownloader:194 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-30 13:07:35,905 :: app.URLDownloader:228 - INFO - Image seccsesfully downloaded
+2022-06-30 13:07:35,908 :: app.URLDownloader:266 - INFO - Links rewrited
+2022-06-30 13:07:35,930 :: app.URLDownloader:149 - INFO - Start parce 'css' files
+2022-06-30 13:07:35,933 :: app.URLDownloader:181 - INFO - 'css' files seccesfully parcerd
+2022-06-30 13:07:35,934 :: app.URLDownloader:194 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-30 13:07:35,935 :: app.URLDownloader:235 - INFO - css file seccsesfully downloaded
+2022-06-30 13:07:35,937 :: app.URLDownloader:266 - INFO - Links rewrited
+2022-06-30 13:07:35,957 :: app.URLDownloader:149 - INFO - Start parce 'js' files
+2022-06-30 13:07:35,958 :: app.URLDownloader:181 - INFO - 'js' files seccesfully parcerd
+2022-06-30 13:07:35,959 :: app.URLDownloader:194 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-06-30 13:07:35,961 :: app.URLDownloader:235 - INFO - js file seccsesfully downloaded
+2022-06-30 13:07:35,963 :: app.URLDownloader:266 - INFO - Links rewrited
+2022-06-30 13:07:35,976 :: app.URLDownloader:53 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
+2022-06-30 13:07:38,068 :: app.URLDownloader:47 - CRITICAL - Requests: ConnectionError
+2022-06-30 13:08:31,274 :: app.URLDownloader:53 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
+2022-06-30 13:08:31,287 :: app.URLDownloader:149 - INFO - Start parce 'img' files
+2022-06-30 13:08:31,290 :: app.URLDownloader:181 - INFO - 'img' files seccesfully parcerd
+2022-06-30 13:08:31,884 :: app.URLDownloader:228 - INFO - Image seccsesfully downloaded
+2022-06-30 13:08:31,911 :: app.URLDownloader:266 - INFO - Links rewrited
+2022-06-30 13:08:31,924 :: app.URLDownloader:149 - INFO - Start parce 'css' files
+2022-06-30 13:08:31,929 :: app.URLDownloader:181 - INFO - 'css' files seccesfully parcerd
+2022-06-30 13:08:32,810 :: app.URLDownloader:235 - INFO - css file seccsesfully downloaded
+2022-06-30 13:08:32,839 :: app.URLDownloader:266 - INFO - Links rewrited
+2022-06-30 13:08:32,855 :: app.URLDownloader:149 - INFO - Start parce 'js' files
+2022-06-30 13:08:32,858 :: app.URLDownloader:181 - INFO - 'js' files seccesfully parcerd
+2022-06-30 13:08:33,648 :: app.URLDownloader:235 - INFO - js file seccsesfully downloaded
+2022-06-30 13:08:33,681 :: app.URLDownloader:266 - INFO - Links rewrited

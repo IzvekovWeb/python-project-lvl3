@@ -37,13 +37,13 @@ LOG_CONFIG = {
             "class": "logging.FileHandler",
             "level": "ERROR",
             "formatter": "detailed",
-            "filename": "../logs/loader.log"
+            "filename": "page_loader/logs/loader.log"
         },
         "file_info": {
             "class": "logging.FileHandler",
             "level": "INFO",
             "formatter": "detailed",
-            "filename": "../logs/file_info.log"
+            "filename": "page_loader/logs/file_info.log"
         }
     },
     "loggers": {
