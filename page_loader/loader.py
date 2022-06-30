@@ -19,11 +19,44 @@ def download(url, output=os.getcwd()):
 
     return page_name
 
+LOG_CONFIG = {
+    "version": 1,
+    "formatters": {
+        "detailed": {
+            "format": "%(asctime)s :: %(name)s:%(lineno)s - %(levelname)s - %(message)s"
+        }
+    },
+    "handlers": {
+        "std": {
+            "class": "logging.StreamHandler",
+            "level": "ERROR",
+            "formatter": "detailed"
+        },
+        "file": {
+            "class": "logging.FileHandler",
+            "level": "ERROR",
+            "formatter": "detailed",
+            "filename": "logs/loader.log"
+        },
+        "file_info": {
+            "class": "logging.FileHandler",
+            "level": "INFO",
+            "formatter": "detailed",
+            "filename": "logs/file_info.log"
+        }
+    },
+    "loggers": {
+        "app": {
+            "handlers": ["std", "file", "file_info"],
+            "level": "DEBUG"
+        }
+    }
+}
 
 def get_logging_dict_config():
-    with open('logs/conf.json') as conf:
-        log_config = conf.read()
-    return json.loads(log_config)
+    # with open('logs/conf.json') as conf:
+    #     log_config = conf.read()
+    return LOG_CONFIG
 
 
 logging.config.dictConfig(get_logging_dict_config())
