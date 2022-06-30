@@ -1,7 +1,7 @@
 import os
 import logging
 import logging.config
-import json
+# import json
 
 from page_loader.URLDownloader import URLDownloader
 
@@ -19,11 +19,12 @@ def download(url, output=os.getcwd()):
 
     return page_name
 
+
 LOG_CONFIG = {
     "version": 1,
     "formatters": {
         "detailed": {
-            "format": "%(asctime)s :: %(name)s:%(lineno)s - %(levelname)s - %(message)s"
+            "format": "%(asctime)s :: %(name)s:%(lineno)s - %(levelname)s - %(message)s"  # noqa: E501
         }
     },
     "handlers": {
@@ -52,6 +53,7 @@ LOG_CONFIG = {
         }
     }
 }
+
 
 def get_logging_dict_config():
     # with open('logs/conf.json') as conf:
