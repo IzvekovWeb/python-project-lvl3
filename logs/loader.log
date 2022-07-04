@@ -3,3 +3,4 @@
 2022-07-04 19:58:03,262 :: app.URLDownloader:271 - ERROR - File write Error: [Errno 2] No such file or directory: 'output/page-loader-hexlet-repl-co-_files/page-loader-hexlet-repl-co-courses./courses'
 2022-07-04 19:59:20,267 :: app.URLDownloader:49 - CRITICAL - Requests: ConnectionError
 2022-07-04 20:04:09,691 :: app.URLDownloader:49 - CRITICAL - Requests: ConnectionError
+2022-07-04 20:15:55,732 :: app.URLDownloader:49 - CRITICAL - Requests: ConnectionError
