@@ -299,7 +299,7 @@ class URLDownloader:
                 new_soup.find('link', href=link['old_p'])['href'] = link['new_p']  # noqa: E501
         try:
             with open(os.path.join(self.output, index), "w") as f:
-                f.write(new_soup.prettify(formatter="html5"))
+                print(new_soup.prettify(), file=f, end="")
             logger.info('Links rewrited')
         except OSError as e:
             logger.error(f'File write Error: {e}')
