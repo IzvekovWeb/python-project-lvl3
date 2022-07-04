@@ -33,6 +33,8 @@ class URLDownloader:
         main_bar.next()
         self.js_download(page_name)
         main_bar.next()
+        self.html_download(page_name)
+        main_bar.next()
         main_bar.finish()
 
         return page_name
@@ -60,6 +62,24 @@ class URLDownloader:
             raise OSError
 
         return file_name
+
+    def html_download(self, index):
+        logger.debug('HTML downloading')
+        # Получаем ссылки из тегов
+        links = self._parce_html(index, 'html')
+
+        # Создаём папку
+        folder_name = self._create_folder()
+
+        # Скачиваем файлы
+        self._download_files(
+            links,
+            folder_name,
+            type='html'
+        )
+
+        # Заменяем ссылки в HTML
+        self._rewrite_links_html(index, links, type='html')
 
     def images_download(self, index):
         logger.debug('Images downloading')
@@ -139,7 +159,7 @@ class URLDownloader:
         return file_name
 
     def _parce_html(self, index, type):  # noqa: C901
-        """Types: img | js | css
+        """Types: img | js | css | html
 
         returns: list [{'old_p': <old_path>}]
         """
@@ -167,6 +187,9 @@ class URLDownloader:
             tags = soup.find_all('script')
             tags = list(filter(lambda x: x.has_attr('src'), tags))
             attr = 'src'
+        elif type == 'html':
+            tags = soup.find_all('link', rel="canonical")
+            attr = 'href'
         else:
             raise TypeError('Wrong file type')
 
@@ -248,9 +271,9 @@ class URLDownloader:
             bar.next()
         bar.finish()
 
-    def _rewrite_links_html(self, html, links, type):  # noqa: C901
+    def _rewrite_links_html(self, index, links, type):  # noqa: C901
         try:
-            with open(os.path.join(self.output, html), "r") as f:
+            with open(os.path.join(self.output, index), "r") as f:
                 contents = f.read()
             logger.debug('File is readed.')
         except OSError as e:
@@ -268,8 +291,11 @@ class URLDownloader:
         elif type == 'js':
             for link in links:
                 new_soup.find('script', src=link['old_p'])['src'] = link['new_p']  # noqa: E501
+        elif type == 'html':
+            for link in links:
+                new_soup.find('link', href=link['old_p'])['href'] = link['new_p']  # noqa: E501
         try:
-            with open(os.path.join(self.output, html), "w") as f:
+            with open(os.path.join(self.output, index), "w") as f:
                 f.write(new_soup.prettify())
             logger.info('Links rewrited')
         except OSError as e:
