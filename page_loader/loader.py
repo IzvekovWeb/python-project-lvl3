@@ -55,9 +55,22 @@ LOG_CONFIG = {
 }
 
 
-def get_logging_dict_config():
+def get_logging_dict_config():  # noqa: C901
+
     # with open('logs/conf.json') as conf:
     #     log_config = conf.read()
+    if not os.path.exists('logs/loader.log'):
+        try:
+            with open('logs/loader.log', 'w'):
+                pass
+        except Exception:
+            raise IsADirectoryError("Folder isn't created")
+    if not os.path.exists('logs/file_info.log'):
+        try:
+            with open('logs/loader.log', 'w'):
+                pass
+        except Exception:
+            raise IsADirectoryError("Folder isn't created")
     return LOG_CONFIG
 
 
