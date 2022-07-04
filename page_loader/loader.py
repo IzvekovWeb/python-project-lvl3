@@ -80,3 +80,6 @@ logging.config.dictConfig(get_logging_dict_config())
 logger = logging.getLogger('app')
 
 logging.getLogger('urllib3').setLevel('CRITICAL')
+
+
+download('https://trendcore.io/level/', 'output')

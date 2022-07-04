@@ -211,6 +211,9 @@ class URLDownloader:
             # Old path, name
             old_path = links[i]['old_p']
             full_old_path = os.path.join(self.url, old_path)
+            print()
+            print(old_path)
+            print(full_old_path)
 
             ext = old_path[old_path.rfind(".") + 1:]
 
@@ -248,7 +251,7 @@ class URLDownloader:
         try:
             with open(os.path.join(self.output, html), "r") as f:
                 contents = f.read()
-            logger.debug('Request is done')
+            logger.debug('File is readed.')
         except OSError as e:
             logger.critical(f'File read Error: {e}')
             raise OSError
@@ -257,13 +260,13 @@ class URLDownloader:
         new_soup = BeautifulSoup(contents, 'html.parser')
         if type == 'img':
             for link in links:
-                new_soup.img['src'] = (link['new_p'])
+                new_soup.find('img', src=link['old_p'])['src'] = link['new_p']
         elif type == 'css':
             for link in links:
-                new_soup.link['href'] = (link['new_p'])
+                new_soup.find('link', href=link['old_p'])['href'] = link['new_p']
         elif type == 'js':
             for link in links:
-                new_soup.script['src'] = (link['new_p'])
+                new_soup.find('script', src=link['old_p'])['src'] = link['new_p']
         try:
             with open(os.path.join(self.output, html), "w") as f:
                 f.write(new_soup.prettify())

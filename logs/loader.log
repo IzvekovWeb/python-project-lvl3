@@ -1,3 +1,0 @@
-2022-07-04 14:18:28,591 :: app.URLDownloader:51 - CRITICAL - Requests: HTTPError 404
-2022-07-04 14:20:27,520 :: app.URLDownloader:47 - CRITICAL - Requests: ConnectionError
-2022-07-04 14:31:22,447 :: app.URLDownloader:47 - CRITICAL - Requests: ConnectionError

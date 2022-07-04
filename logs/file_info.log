@@ -1,85 +1,318 @@
-2022-07-04 13:54:29,620 :: app.URLDownloader:52 - INFO - File page-loader-hexlet-repl-co-22344.html has been downloaded
-2022-07-04 13:54:29,667 :: app.URLDownloader:148 - INFO - Start parce 'img' files
-2022-07-04 13:54:29,678 :: app.URLDownloader:180 - INFO - 'img' files seccesfully parcerd
-2022-07-04 13:54:29,703 :: app.URLDownloader:265 - INFO - Links rewrited
-2022-07-04 13:54:29,727 :: app.URLDownloader:148 - INFO - Start parce 'css' files
-2022-07-04 13:54:29,731 :: app.URLDownloader:180 - INFO - 'css' files seccesfully parcerd
-2022-07-04 13:54:29,763 :: app.URLDownloader:265 - INFO - Links rewrited
-2022-07-04 13:54:29,781 :: app.URLDownloader:148 - INFO - Start parce 'js' files
-2022-07-04 13:54:29,785 :: app.URLDownloader:180 - INFO - 'js' files seccesfully parcerd
-2022-07-04 13:54:29,808 :: app.URLDownloader:265 - INFO - Links rewrited
-2022-07-04 13:55:28,208 :: app.URLDownloader:54 - INFO - File page-loader-hexlet-repl-co-22344.html has been downloaded
-2022-07-04 13:55:28,236 :: app.URLDownloader:150 - INFO - Start parce 'img' files
-2022-07-04 13:55:28,243 :: app.URLDownloader:182 - INFO - 'img' files seccesfully parcerd
-2022-07-04 13:55:28,268 :: app.URLDownloader:267 - INFO - Links rewrited
-2022-07-04 13:55:28,296 :: app.URLDownloader:150 - INFO - Start parce 'css' files
-2022-07-04 13:55:28,301 :: app.URLDownloader:182 - INFO - 'css' files seccesfully parcerd
-2022-07-04 13:55:28,325 :: app.URLDownloader:267 - INFO - Links rewrited
-2022-07-04 13:55:28,349 :: app.URLDownloader:150 - INFO - Start parce 'js' files
-2022-07-04 13:55:28,358 :: app.URLDownloader:182 - INFO - 'js' files seccesfully parcerd
-2022-07-04 13:55:28,461 :: app.URLDownloader:267 - INFO - Links rewrited
-2022-07-04 14:18:28,591 :: app.URLDownloader:51 - CRITICAL - Requests: HTTPError 404
-2022-07-04 14:19:01,457 :: app.URLDownloader:57 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
-2022-07-04 14:19:01,473 :: app.URLDownloader:153 - INFO - Start parce 'img' files
-2022-07-04 14:19:01,475 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
-2022-07-04 14:19:01,480 :: app.URLDownloader:198 - INFO - Folder page-loader-hexlet-repl-co-_files created
-2022-07-04 14:19:02,604 :: app.URLDownloader:232 - INFO - Image seccsesfully downloaded
-2022-07-04 14:19:02,637 :: app.URLDownloader:270 - INFO - Links rewrited
-2022-07-04 14:19:02,644 :: app.URLDownloader:153 - INFO - Start parce 'css' files
-2022-07-04 14:19:02,646 :: app.URLDownloader:185 - INFO - 'css' files seccesfully parcerd
-2022-07-04 14:19:03,884 :: app.URLDownloader:239 - INFO - css file seccsesfully downloaded
-2022-07-04 14:19:03,904 :: app.URLDownloader:270 - INFO - Links rewrited
-2022-07-04 14:19:03,916 :: app.URLDownloader:153 - INFO - Start parce 'js' files
-2022-07-04 14:19:03,919 :: app.URLDownloader:185 - INFO - 'js' files seccesfully parcerd
-2022-07-04 14:19:05,205 :: app.URLDownloader:239 - INFO - js file seccsesfully downloaded
-2022-07-04 14:19:05,225 :: app.URLDownloader:270 - INFO - Links rewrited
-2022-07-04 14:19:48,962 :: app.URLDownloader:153 - INFO - Start parce 'img' files
-2022-07-04 14:19:48,964 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
-2022-07-04 14:19:48,967 :: app.URLDownloader:198 - INFO - Folder page-loader-hexlet-repl-co-_files created
-2022-07-04 14:19:48,973 :: app.URLDownloader:232 - INFO - Image seccsesfully downloaded
-2022-07-04 14:19:48,982 :: app.URLDownloader:270 - INFO - Links rewrited
-2022-07-04 14:19:49,021 :: app.URLDownloader:153 - INFO - Start parce 'css' files
-2022-07-04 14:19:49,022 :: app.URLDownloader:185 - INFO - 'css' files seccesfully parcerd
-2022-07-04 14:19:49,023 :: app.URLDownloader:198 - INFO - Folder page-loader-hexlet-repl-co-_files created
-2022-07-04 14:19:49,025 :: app.URLDownloader:239 - INFO - css file seccsesfully downloaded
-2022-07-04 14:19:49,028 :: app.URLDownloader:270 - INFO - Links rewrited
-2022-07-04 14:19:49,064 :: app.URLDownloader:153 - INFO - Start parce 'js' files
-2022-07-04 14:19:49,067 :: app.URLDownloader:185 - INFO - 'js' files seccesfully parcerd
-2022-07-04 14:19:49,073 :: app.URLDownloader:198 - INFO - Folder page-loader-hexlet-repl-co-_files created
-2022-07-04 14:19:49,076 :: app.URLDownloader:239 - INFO - js file seccsesfully downloaded
-2022-07-04 14:19:49,081 :: app.URLDownloader:270 - INFO - Links rewrited
-2022-07-04 14:19:49,099 :: app.URLDownloader:57 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
-2022-07-04 14:20:25,343 :: app.URLDownloader:153 - INFO - Start parce 'img' files
-2022-07-04 14:20:25,345 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
-2022-07-04 14:20:25,345 :: app.URLDownloader:198 - INFO - Folder page-loader-hexlet-repl-co-_files created
-2022-07-04 14:20:25,351 :: app.URLDownloader:232 - INFO - Image seccsesfully downloaded
-2022-07-04 14:20:25,357 :: app.URLDownloader:270 - INFO - Links rewrited
-2022-07-04 14:20:25,379 :: app.URLDownloader:153 - INFO - Start parce 'css' files
-2022-07-04 14:20:25,382 :: app.URLDownloader:185 - INFO - 'css' files seccesfully parcerd
-2022-07-04 14:20:25,385 :: app.URLDownloader:198 - INFO - Folder page-loader-hexlet-repl-co-_files created
-2022-07-04 14:20:25,388 :: app.URLDownloader:239 - INFO - css file seccsesfully downloaded
-2022-07-04 14:20:25,391 :: app.URLDownloader:270 - INFO - Links rewrited
-2022-07-04 14:20:25,417 :: app.URLDownloader:153 - INFO - Start parce 'js' files
-2022-07-04 14:20:25,418 :: app.URLDownloader:185 - INFO - 'js' files seccesfully parcerd
-2022-07-04 14:20:25,419 :: app.URLDownloader:198 - INFO - Folder page-loader-hexlet-repl-co-_files created
-2022-07-04 14:20:25,421 :: app.URLDownloader:239 - INFO - js file seccsesfully downloaded
-2022-07-04 14:20:25,423 :: app.URLDownloader:270 - INFO - Links rewrited
-2022-07-04 14:20:25,439 :: app.URLDownloader:57 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
-2022-07-04 14:20:27,520 :: app.URLDownloader:47 - CRITICAL - Requests: ConnectionError
-2022-07-04 14:31:20,297 :: app.URLDownloader:153 - INFO - Start parce 'img' files
-2022-07-04 14:31:20,298 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
-2022-07-04 14:31:20,299 :: app.URLDownloader:198 - INFO - Folder page-loader-hexlet-repl-co-_files created
-2022-07-04 14:31:20,304 :: app.URLDownloader:232 - INFO - Image seccsesfully downloaded
-2022-07-04 14:31:20,306 :: app.URLDownloader:270 - INFO - Links rewrited
-2022-07-04 14:31:20,325 :: app.URLDownloader:153 - INFO - Start parce 'css' files
-2022-07-04 14:31:20,327 :: app.URLDownloader:185 - INFO - 'css' files seccesfully parcerd
-2022-07-04 14:31:20,327 :: app.URLDownloader:198 - INFO - Folder page-loader-hexlet-repl-co-_files created
-2022-07-04 14:31:20,329 :: app.URLDownloader:239 - INFO - css file seccsesfully downloaded
-2022-07-04 14:31:20,331 :: app.URLDownloader:270 - INFO - Links rewrited
-2022-07-04 14:31:20,352 :: app.URLDownloader:153 - INFO - Start parce 'js' files
-2022-07-04 14:31:20,354 :: app.URLDownloader:185 - INFO - 'js' files seccesfully parcerd
-2022-07-04 14:31:20,354 :: app.URLDownloader:198 - INFO - Folder page-loader-hexlet-repl-co-_files created
-2022-07-04 14:31:20,356 :: app.URLDownloader:239 - INFO - js file seccsesfully downloaded
-2022-07-04 14:31:20,359 :: app.URLDownloader:270 - INFO - Links rewrited
-2022-07-04 14:31:20,371 :: app.URLDownloader:57 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
-2022-07-04 14:31:22,447 :: app.URLDownloader:47 - CRITICAL - Requests: ConnectionError
+2022-07-04 15:07:39,749 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:07:39,806 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:07:39,815 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:07:40,501 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:07:41,102 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:07:41,745 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:07:42,780 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:07:43,315 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:07:43,379 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 15:07:43,485 :: app.URLDownloader:153 - INFO - Start parce 'css' files
+2022-07-04 15:07:43,506 :: app.URLDownloader:185 - INFO - 'css' files seccesfully parcerd
+2022-07-04 15:07:44,261 :: app.URLDownloader:242 - INFO - css file seccsesfully downloaded
+2022-07-04 15:07:44,319 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 15:07:44,354 :: app.URLDownloader:153 - INFO - Start parce 'js' files
+2022-07-04 15:07:44,365 :: app.URLDownloader:185 - INFO - 'js' files seccesfully parcerd
+2022-07-04 15:07:44,965 :: app.URLDownloader:242 - INFO - js file seccsesfully downloaded
+2022-07-04 15:07:45,567 :: app.URLDownloader:242 - INFO - js file seccsesfully downloaded
+2022-07-04 15:07:45,610 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 15:08:26,866 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:08:26,932 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:08:26,940 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:08:27,662 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:08:28,228 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:08:28,821 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:08:29,458 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:08:30,064 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:08:30,133 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 15:08:30,185 :: app.URLDownloader:153 - INFO - Start parce 'css' files
+2022-07-04 15:08:30,194 :: app.URLDownloader:185 - INFO - 'css' files seccesfully parcerd
+2022-07-04 15:08:30,947 :: app.URLDownloader:242 - INFO - css file seccsesfully downloaded
+2022-07-04 15:08:31,001 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 15:08:31,036 :: app.URLDownloader:153 - INFO - Start parce 'js' files
+2022-07-04 15:08:31,047 :: app.URLDownloader:185 - INFO - 'js' files seccesfully parcerd
+2022-07-04 15:08:31,714 :: app.URLDownloader:242 - INFO - js file seccsesfully downloaded
+2022-07-04 15:08:32,371 :: app.URLDownloader:242 - INFO - js file seccsesfully downloaded
+2022-07-04 15:08:32,475 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 15:11:30,464 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:11:30,533 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:11:30,541 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:11:31,141 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:11:31,787 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:11:32,384 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:11:32,951 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:11:33,541 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:11:33,729 :: app.URLDownloader:275 - INFO - Links rewrited
+2022-07-04 15:11:33,793 :: app.URLDownloader:153 - INFO - Start parce 'css' files
+2022-07-04 15:11:33,812 :: app.URLDownloader:185 - INFO - 'css' files seccesfully parcerd
+2022-07-04 15:11:34,462 :: app.URLDownloader:242 - INFO - css file seccsesfully downloaded
+2022-07-04 15:11:34,540 :: app.URLDownloader:275 - INFO - Links rewrited
+2022-07-04 15:11:34,579 :: app.URLDownloader:153 - INFO - Start parce 'js' files
+2022-07-04 15:11:34,591 :: app.URLDownloader:185 - INFO - 'js' files seccesfully parcerd
+2022-07-04 15:11:35,246 :: app.URLDownloader:242 - INFO - js file seccsesfully downloaded
+2022-07-04 15:11:35,768 :: app.URLDownloader:242 - INFO - js file seccsesfully downloaded
+2022-07-04 15:11:35,821 :: app.URLDownloader:275 - INFO - Links rewrited
+2022-07-04 15:12:51,432 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:12:51,490 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:12:51,498 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:12:52,514 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:12:53,302 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:12:54,297 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:12:54,976 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:12:55,695 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:12:55,775 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 15:12:55,845 :: app.URLDownloader:153 - INFO - Start parce 'css' files
+2022-07-04 15:12:55,867 :: app.URLDownloader:185 - INFO - 'css' files seccesfully parcerd
+2022-07-04 15:12:56,523 :: app.URLDownloader:242 - INFO - css file seccsesfully downloaded
+2022-07-04 15:12:56,567 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 15:12:56,611 :: app.URLDownloader:153 - INFO - Start parce 'js' files
+2022-07-04 15:12:56,627 :: app.URLDownloader:185 - INFO - 'js' files seccesfully parcerd
+2022-07-04 15:12:57,531 :: app.URLDownloader:242 - INFO - js file seccsesfully downloaded
+2022-07-04 15:12:58,133 :: app.URLDownloader:242 - INFO - js file seccsesfully downloaded
+2022-07-04 15:12:58,187 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 15:14:25,892 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:14:25,945 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:14:25,955 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:14:26,578 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:14:27,301 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:14:27,863 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:14:28,388 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:14:28,980 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:14:29,041 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 15:14:29,111 :: app.URLDownloader:153 - INFO - Start parce 'css' files
+2022-07-04 15:14:29,129 :: app.URLDownloader:185 - INFO - 'css' files seccesfully parcerd
+2022-07-04 15:14:29,859 :: app.URLDownloader:242 - INFO - css file seccsesfully downloaded
+2022-07-04 15:14:29,941 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 15:14:29,986 :: app.URLDownloader:153 - INFO - Start parce 'js' files
+2022-07-04 15:14:30,009 :: app.URLDownloader:185 - INFO - 'js' files seccesfully parcerd
+2022-07-04 15:14:30,604 :: app.URLDownloader:242 - INFO - js file seccsesfully downloaded
+2022-07-04 15:14:31,239 :: app.URLDownloader:242 - INFO - js file seccsesfully downloaded
+2022-07-04 15:14:31,280 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 15:14:41,024 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:14:41,082 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:14:41,091 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:14:41,739 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:14:42,503 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:14:43,136 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:14:43,900 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:14:44,816 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:14:44,879 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 15:14:44,922 :: app.URLDownloader:153 - INFO - Start parce 'css' files
+2022-07-04 15:14:44,933 :: app.URLDownloader:185 - INFO - 'css' files seccesfully parcerd
+2022-07-04 15:14:45,693 :: app.URLDownloader:242 - INFO - css file seccsesfully downloaded
+2022-07-04 15:14:45,768 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 15:14:45,815 :: app.URLDownloader:153 - INFO - Start parce 'js' files
+2022-07-04 15:14:45,829 :: app.URLDownloader:185 - INFO - 'js' files seccesfully parcerd
+2022-07-04 15:14:46,462 :: app.URLDownloader:242 - INFO - js file seccsesfully downloaded
+2022-07-04 15:14:47,062 :: app.URLDownloader:242 - INFO - js file seccsesfully downloaded
+2022-07-04 15:14:47,112 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 15:20:26,161 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:20:26,235 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:20:26,258 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:20:26,840 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:20:27,540 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:20:28,480 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:20:29,082 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:20:29,653 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:20:29,755 :: app.URLDownloader:275 - INFO - Links rewrited
+2022-07-04 15:20:29,794 :: app.URLDownloader:153 - INFO - Start parce 'css' files
+2022-07-04 15:20:29,818 :: app.URLDownloader:185 - INFO - 'css' files seccesfully parcerd
+2022-07-04 15:20:30,537 :: app.URLDownloader:242 - INFO - css file seccsesfully downloaded
+2022-07-04 15:20:30,607 :: app.URLDownloader:275 - INFO - Links rewrited
+2022-07-04 15:20:30,646 :: app.URLDownloader:153 - INFO - Start parce 'js' files
+2022-07-04 15:20:30,672 :: app.URLDownloader:185 - INFO - 'js' files seccesfully parcerd
+2022-07-04 15:20:31,356 :: app.URLDownloader:242 - INFO - js file seccsesfully downloaded
+2022-07-04 15:20:31,964 :: app.URLDownloader:242 - INFO - js file seccsesfully downloaded
+2022-07-04 15:21:06,868 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:21:06,926 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:21:06,952 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:21:07,552 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:21:08,103 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:21:08,700 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:21:09,264 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:21:09,898 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:22:24,279 :: app.URLDownloader:275 - INFO - Links rewrited
+2022-07-04 15:22:40,236 :: app.URLDownloader:153 - INFO - Start parce 'css' files
+2022-07-04 15:22:40,304 :: app.URLDownloader:185 - INFO - 'css' files seccesfully parcerd
+2022-07-04 15:22:48,239 :: app.URLDownloader:242 - INFO - css file seccsesfully downloaded
+2022-07-04 15:29:37,462 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:29:37,509 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:29:37,531 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:29:38,130 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:29:38,681 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:29:39,213 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:29:39,773 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:29:40,376 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:40:25,837 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:40:25,880 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:40:25,904 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:40:26,496 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:40:27,089 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:40:27,725 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:40:28,424 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:40:28,979 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:41:14,024 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:41:14,092 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:41:14,115 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:41:14,846 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:41:15,682 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:41:16,361 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:41:17,005 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:41:17,716 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:42:20,509 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:42:20,549 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:42:20,571 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:42:21,176 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:42:21,722 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:42:22,324 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:42:22,957 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:42:23,494 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:43:13,915 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:43:13,970 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:43:13,995 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:43:14,756 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:43:15,340 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:43:15,868 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:43:16,419 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:43:16,994 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:45:55,673 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:45:55,721 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:45:55,745 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:45:56,410 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:45:56,912 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:45:57,539 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:45:58,132 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:45:58,748 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:46:40,828 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:46:40,886 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:46:40,908 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:46:41,487 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:46:42,114 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:46:42,945 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:46:43,524 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:46:44,214 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:48:58,018 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:48:58,064 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:48:58,086 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:48:58,680 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:48:59,223 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:48:59,925 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:49:00,544 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:49:01,029 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:49:23,816 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:49:23,870 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:49:23,903 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:49:24,561 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:49:25,191 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:49:25,844 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:49:26,484 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:49:27,041 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:51:08,573 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:51:08,618 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:51:08,640 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:51:09,170 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:51:09,748 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:51:10,245 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:51:10,798 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:51:11,368 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:51:48,642 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:51:48,692 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:51:48,715 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:51:49,249 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:51:49,885 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:51:50,402 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:51:51,000 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:51:51,597 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:54:40,016 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:54:40,063 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:54:40,087 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:54:40,646 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:54:41,245 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:54:41,808 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:54:42,403 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:54:42,955 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:55:45,657 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 15:55:45,718 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 15:55:45,740 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 15:55:46,296 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:55:46,774 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:55:47,328 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:55:48,368 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 15:55:50,241 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:52:44,221 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 16:52:44,277 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 16:52:44,300 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 16:52:44,890 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:52:45,461 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:52:46,008 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:52:46,751 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:52:47,367 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:54:22,471 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 16:54:22,533 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 16:54:22,584 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 16:54:23,107 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:54:23,629 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:54:24,205 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:54:24,845 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:54:25,422 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:55:51,693 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 16:55:51,744 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 16:55:51,771 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 16:55:52,252 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:55:52,884 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:55:53,446 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:55:54,043 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:55:54,610 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:57:07,333 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 16:57:07,393 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 16:57:07,418 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 16:57:08,043 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:57:08,613 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:57:09,201 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:57:09,759 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 16:57:10,359 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:01:37,598 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 17:01:37,661 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 17:01:37,685 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 17:01:38,324 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:01:38,763 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:01:39,310 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:01:39,951 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:01:40,443 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:03:00,847 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 17:03:00,910 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 17:03:00,934 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 17:03:01,554 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:03:02,244 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:03:02,910 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:03:03,648 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:03:04,289 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:06:00,180 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 17:06:00,246 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 17:06:00,269 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 17:06:00,962 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:06:01,571 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:06:02,237 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:06:02,923 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:06:03,557 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:06:09,071 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 17:06:09,121 :: app.URLDownloader:153 - INFO - Start parce 'css' files
+2022-07-04 17:06:09,175 :: app.URLDownloader:185 - INFO - 'css' files seccesfully parcerd
+2022-07-04 17:06:09,924 :: app.URLDownloader:242 - INFO - css file seccsesfully downloaded
+2022-07-04 17:07:07,911 :: app.URLDownloader:57 - INFO - File trendcore-io-level-.html has been downloaded
+2022-07-04 17:07:07,941 :: app.URLDownloader:153 - INFO - Start parce 'img' files
+2022-07-04 17:07:07,966 :: app.URLDownloader:185 - INFO - 'img' files seccesfully parcerd
+2022-07-04 17:07:08,759 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:07:09,435 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:07:10,271 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:07:10,953 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:07:11,999 :: app.URLDownloader:235 - INFO - Image seccsesfully downloaded
+2022-07-04 17:07:17,209 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 17:07:17,255 :: app.URLDownloader:153 - INFO - Start parce 'css' files
+2022-07-04 17:07:17,309 :: app.URLDownloader:185 - INFO - 'css' files seccesfully parcerd
+2022-07-04 17:07:18,279 :: app.URLDownloader:242 - INFO - css file seccsesfully downloaded
+2022-07-04 17:08:49,433 :: app.URLDownloader:274 - INFO - Links rewrited
+2022-07-04 17:08:49,482 :: app.URLDownloader:153 - INFO - Start parce 'js' files
+2022-07-04 17:08:49,514 :: app.URLDownloader:185 - INFO - 'js' files seccesfully parcerd
+2022-07-04 17:08:50,640 :: app.URLDownloader:242 - INFO - js file seccsesfully downloaded
+2022-07-04 17:08:51,157 :: app.URLDownloader:242 - INFO - js file seccsesfully downloaded
