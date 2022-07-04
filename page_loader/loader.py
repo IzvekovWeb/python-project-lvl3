@@ -13,7 +13,7 @@ def download(url, output=os.getcwd()):
     downloader = URLDownloader(url, output)
     page_name = downloader.download()
 
-    print(page_name)
+    print(page_name[page_name.rfind('/') + 1:])
 
     logger.debug('Stop programm')
 
