@@ -17,7 +17,7 @@ def download(url, output=os.getcwd()):
 
     print(page_name)
 
-    return os.path.abspath(page_name)
+    return os.path.join(output, page_name)
 
 
 LOG_CONFIG = {
