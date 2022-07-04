@@ -116,7 +116,6 @@ class URLDownloader:
         # Отделяем схему (https:// или //)
         file_name = re.search(r"(?<=^https:\/\/).+", url, flags=re.MULTILINE)
         # (?<=https:\/\/(?!.*https:\/\/)).+
-
         file_name = url if file_name is None else file_name.group(0)
 
         # Заменяем разделители на дефис
@@ -209,12 +208,15 @@ class URLDownloader:
 
             # Old path, name
             old_path = links[i]['old_p']
+
             if old_path.startswith('/'):
                 full_old_path = os.path.join('https://', self.host, old_path[1:])  # noqa: E501
+            elif old_path.startswith('http'):
+                full_old_path = old_path
             else:
                 full_old_path = os.path.join(self.url, old_path)
 
-            ext = old_path[old_path.rfind(".") + 1:]
+            ext = old_path[old_path.rfind(".") + 1:].split('?')[0]
 
             # New path, name
             new_name = self._create_file_name(full_old_path, ext)
