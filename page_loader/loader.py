@@ -61,16 +61,18 @@ def get_logging_dict_config():  # noqa: C901
     #     log_config = conf.read()
     if not os.path.exists('logs/loader.log'):
         try:
+            os.mkdir('logs')
             with open('logs/loader.log', 'w'):
                 pass
         except Exception:
-            raise IsADirectoryError("Folder isn't created")
+            raise IsADirectoryError("Path isn't wrong")
     if not os.path.exists('logs/file_info.log'):
         try:
+            os.mkdir('logs')
             with open('logs/loader.log', 'w'):
                 pass
         except Exception:
-            raise IsADirectoryError("Folder isn't created")
+            raise IsADirectoryError("Path isn't wrong")
     return LOG_CONFIG
 
 
