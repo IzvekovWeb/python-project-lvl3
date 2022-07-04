@@ -433,3 +433,20 @@
 2022-07-04 21:43:38,904 :: app.URLDownloader:206 - INFO - 'html' files seccesfully parcerd
 2022-07-04 21:43:40,098 :: app.URLDownloader:269 - INFO - html file seccsesfully downloaded
 2022-07-04 21:43:40,130 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 21:51:28,009 :: app.URLDownloader:59 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
+2022-07-04 21:51:28,026 :: app.URLDownloader:174 - INFO - Start parce 'img' files
+2022-07-04 21:51:28,030 :: app.URLDownloader:206 - INFO - 'img' files seccesfully parcerd
+2022-07-04 21:51:29,358 :: app.URLDownloader:262 - INFO - Image seccsesfully downloaded
+2022-07-04 21:51:29,393 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 21:51:29,415 :: app.URLDownloader:174 - INFO - Start parce 'css' files
+2022-07-04 21:51:29,417 :: app.URLDownloader:206 - INFO - 'css' files seccesfully parcerd
+2022-07-04 21:51:30,616 :: app.URLDownloader:269 - INFO - css file seccsesfully downloaded
+2022-07-04 21:51:30,636 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 21:51:30,736 :: app.URLDownloader:174 - INFO - Start parce 'js' files
+2022-07-04 21:51:30,760 :: app.URLDownloader:206 - INFO - 'js' files seccesfully parcerd
+2022-07-04 21:51:31,975 :: app.URLDownloader:269 - INFO - js file seccsesfully downloaded
+2022-07-04 21:51:32,003 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 21:51:32,023 :: app.URLDownloader:174 - INFO - Start parce 'html' files
+2022-07-04 21:51:32,026 :: app.URLDownloader:206 - INFO - 'html' files seccesfully parcerd
+2022-07-04 21:51:33,325 :: app.URLDownloader:269 - INFO - html file seccsesfully downloaded
+2022-07-04 21:51:33,376 :: app.URLDownloader:303 - INFO - Links rewrited
