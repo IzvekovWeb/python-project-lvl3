@@ -72,7 +72,7 @@ def get_logging_dict_config():  # noqa: C901
             with open('logs/loader.log', 'w'):
                 pass
         except Exception:
-            raise IsADirectoryError("Path isn't wrong")
+            raise IsADirectoryError("Path is wrong")
     return LOG_CONFIG
 
 
@@ -80,6 +80,3 @@ logging.config.dictConfig(get_logging_dict_config())
 logger = logging.getLogger('app')
 
 logging.getLogger('urllib3').setLevel('CRITICAL')
-
-
-download('https://trendcore.io/level/', 'output')

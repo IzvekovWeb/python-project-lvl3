@@ -113,12 +113,14 @@ class URLDownloader:
 
     def _create_file_name(self, url, ext='html'):
 
-        # Отделяем схему (https://)
+        # Отделяем схему (https:// или //)
         file_name = re.search(r"(?<=^https:\/\/).+", url, flags=re.MULTILINE)
         # (?<=https:\/\/(?!.*https:\/\/)).+
 
+        file_name = url if file_name is None else file_name.group(0)
+
         # Заменяем разделители на дефис
-        file_name = re.sub(r'[./;,\s_:]', '-', file_name.group(0))
+        file_name = re.sub(r'[./;,\s_:]', '-', file_name)
 
         def add_extension(name, ext):
             # Проверяем наличие расширения
@@ -177,10 +179,7 @@ class URLDownloader:
             if current_host != self.host and current_host != '':
                 continue
 
-            if tag[attr].startswith('/'):
-                links.append({'old_p': tag[attr][1:]})
-            else:
-                links.append({'old_p': tag[attr]})
+            links.append({'old_p': tag[attr]})
 
         logger.info(f"'{type}' files seccesfully parcerd")
 
@@ -210,10 +209,10 @@ class URLDownloader:
 
             # Old path, name
             old_path = links[i]['old_p']
-            full_old_path = os.path.join(self.url, old_path)
-            print()
-            print(old_path)
-            print(full_old_path)
+            if old_path.startswith('/'):
+                full_old_path = os.path.join('https://', self.host, old_path[1:])  # noqa: E501
+            else:
+                full_old_path = os.path.join(self.url, old_path)
 
             ext = old_path[old_path.rfind(".") + 1:]
 
@@ -263,10 +262,10 @@ class URLDownloader:
                 new_soup.find('img', src=link['old_p'])['src'] = link['new_p']
         elif type == 'css':
             for link in links:
-                new_soup.find('link', href=link['old_p'])['href'] = link['new_p']
+                new_soup.find('link', href=link['old_p'])['href'] = link['new_p']  # noqa: E501
         elif type == 'js':
             for link in links:
-                new_soup.find('script', src=link['old_p'])['src'] = link['new_p']
+                new_soup.find('script', src=link['old_p'])['src'] = link['new_p']  # noqa: E501
         try:
             with open(os.path.join(self.output, html), "w") as f:
                 f.write(new_soup.prettify())
