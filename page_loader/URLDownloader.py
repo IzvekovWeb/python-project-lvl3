@@ -239,7 +239,7 @@ class URLDownloader:
             else:
                 full_old_path = os.path.join(self.url, old_path)
 
-            if type is not 'html':
+            if type != 'html':
                 ext = old_path[old_path.rfind(".") + 1:].split('?')[0]
             else:
                 ext = 'html'

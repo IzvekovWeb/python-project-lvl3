@@ -15,3 +15,72 @@
 2022-07-04 19:35:10,861 :: app.URLDownloader:300 - INFO - Links rewrited
 2022-07-04 19:35:10,875 :: app.URLDownloader:59 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
 2022-07-04 19:35:12,962 :: app.URLDownloader:49 - CRITICAL - Requests: ConnectionError
+2022-07-04 19:54:57,891 :: app.URLDownloader:174 - INFO - Start parce 'img' files
+2022-07-04 19:54:57,893 :: app.URLDownloader:206 - INFO - 'img' files seccesfully parcerd
+2022-07-04 19:54:57,893 :: app.URLDownloader:219 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-07-04 19:54:57,900 :: app.URLDownloader:262 - INFO - Image seccsesfully downloaded
+2022-07-04 19:54:57,908 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 19:55:00,192 :: app.URLDownloader:174 - INFO - Start parce 'css' files
+2022-07-04 19:55:00,197 :: app.URLDownloader:206 - INFO - 'css' files seccesfully parcerd
+2022-07-04 19:55:00,198 :: app.URLDownloader:219 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-07-04 19:55:00,199 :: app.URLDownloader:269 - INFO - css file seccsesfully downloaded
+2022-07-04 19:55:00,201 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 19:55:00,250 :: app.URLDownloader:174 - INFO - Start parce 'js' files
+2022-07-04 19:55:00,252 :: app.URLDownloader:206 - INFO - 'js' files seccesfully parcerd
+2022-07-04 19:55:00,253 :: app.URLDownloader:219 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-07-04 19:55:00,254 :: app.URLDownloader:269 - INFO - js file seccsesfully downloaded
+2022-07-04 19:55:00,257 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 19:55:00,315 :: app.URLDownloader:59 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
+2022-07-04 19:55:02,389 :: app.URLDownloader:49 - CRITICAL - Requests: ConnectionError
+2022-07-04 19:57:57,862 :: app.URLDownloader:59 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
+2022-07-04 19:57:57,874 :: app.URLDownloader:174 - INFO - Start parce 'img' files
+2022-07-04 19:57:57,877 :: app.URLDownloader:206 - INFO - 'img' files seccesfully parcerd
+2022-07-04 19:57:57,884 :: app.URLDownloader:219 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-07-04 19:57:58,843 :: app.URLDownloader:262 - INFO - Image seccsesfully downloaded
+2022-07-04 19:57:58,889 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 19:57:58,907 :: app.URLDownloader:174 - INFO - Start parce 'css' files
+2022-07-04 19:57:58,909 :: app.URLDownloader:206 - INFO - 'css' files seccesfully parcerd
+2022-07-04 19:58:01,106 :: app.URLDownloader:269 - INFO - css file seccsesfully downloaded
+2022-07-04 19:58:01,135 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 19:58:01,160 :: app.URLDownloader:174 - INFO - Start parce 'js' files
+2022-07-04 19:58:01,163 :: app.URLDownloader:206 - INFO - 'js' files seccesfully parcerd
+2022-07-04 19:58:02,032 :: app.URLDownloader:269 - INFO - js file seccsesfully downloaded
+2022-07-04 19:58:02,056 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 19:58:02,078 :: app.URLDownloader:174 - INFO - Start parce 'html' files
+2022-07-04 19:58:02,079 :: app.URLDownloader:206 - INFO - 'html' files seccesfully parcerd
+2022-07-04 19:58:03,262 :: app.URLDownloader:271 - ERROR - File write Error: [Errno 2] No such file or directory: 'output/page-loader-hexlet-repl-co-_files/page-loader-hexlet-repl-co-courses./courses'
+2022-07-04 19:58:03,289 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 19:58:57,719 :: app.URLDownloader:59 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
+2022-07-04 19:58:57,735 :: app.URLDownloader:174 - INFO - Start parce 'img' files
+2022-07-04 19:58:57,740 :: app.URLDownloader:206 - INFO - 'img' files seccesfully parcerd
+2022-07-04 19:58:58,604 :: app.URLDownloader:262 - INFO - Image seccsesfully downloaded
+2022-07-04 19:58:58,638 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 19:58:58,651 :: app.URLDownloader:174 - INFO - Start parce 'css' files
+2022-07-04 19:58:58,653 :: app.URLDownloader:206 - INFO - 'css' files seccesfully parcerd
+2022-07-04 19:59:00,035 :: app.URLDownloader:269 - INFO - css file seccsesfully downloaded
+2022-07-04 19:59:00,059 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 19:59:00,077 :: app.URLDownloader:174 - INFO - Start parce 'js' files
+2022-07-04 19:59:00,079 :: app.URLDownloader:206 - INFO - 'js' files seccesfully parcerd
+2022-07-04 19:59:01,752 :: app.URLDownloader:269 - INFO - js file seccsesfully downloaded
+2022-07-04 19:59:01,782 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 19:59:01,796 :: app.URLDownloader:174 - INFO - Start parce 'html' files
+2022-07-04 19:59:01,798 :: app.URLDownloader:206 - INFO - 'html' files seccesfully parcerd
+2022-07-04 19:59:03,073 :: app.URLDownloader:269 - INFO - html file seccsesfully downloaded
+2022-07-04 19:59:03,103 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 19:59:18,000 :: app.URLDownloader:174 - INFO - Start parce 'img' files
+2022-07-04 19:59:18,002 :: app.URLDownloader:206 - INFO - 'img' files seccesfully parcerd
+2022-07-04 19:59:18,007 :: app.URLDownloader:219 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-07-04 19:59:18,076 :: app.URLDownloader:262 - INFO - Image seccsesfully downloaded
+2022-07-04 19:59:18,081 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 19:59:18,112 :: app.URLDownloader:174 - INFO - Start parce 'css' files
+2022-07-04 19:59:18,116 :: app.URLDownloader:206 - INFO - 'css' files seccesfully parcerd
+2022-07-04 19:59:18,137 :: app.URLDownloader:219 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-07-04 19:59:18,152 :: app.URLDownloader:269 - INFO - css file seccsesfully downloaded
+2022-07-04 19:59:18,154 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 19:59:18,177 :: app.URLDownloader:174 - INFO - Start parce 'js' files
+2022-07-04 19:59:18,178 :: app.URLDownloader:206 - INFO - 'js' files seccesfully parcerd
+2022-07-04 19:59:18,178 :: app.URLDownloader:219 - INFO - Folder page-loader-hexlet-repl-co-_files created
+2022-07-04 19:59:18,181 :: app.URLDownloader:269 - INFO - js file seccsesfully downloaded
+2022-07-04 19:59:18,185 :: app.URLDownloader:303 - INFO - Links rewrited
+2022-07-04 19:59:18,202 :: app.URLDownloader:59 - INFO - File page-loader-hexlet-repl-co-.html has been downloaded
+2022-07-04 19:59:20,267 :: app.URLDownloader:49 - CRITICAL - Requests: ConnectionError
