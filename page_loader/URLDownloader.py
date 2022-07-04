@@ -239,7 +239,10 @@ class URLDownloader:
             else:
                 full_old_path = os.path.join(self.url, old_path)
 
-            ext = old_path[old_path.rfind(".") + 1:].split('?')[0]
+            if type is not 'html':
+                ext = old_path[old_path.rfind(".") + 1:].split('?')[0]
+            else:
+                ext = 'html'
 
             # New path, name
             new_name = self._create_file_name(full_old_path, ext)
