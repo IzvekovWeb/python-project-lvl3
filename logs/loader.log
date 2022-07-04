@@ -10,3 +10,4 @@
 2022-07-04 20:55:33,369 :: app.URLDownloader:49 - CRITICAL - Requests: ConnectionError
 2022-07-04 21:05:40,715 :: app.URLDownloader:50 - CRITICAL - Requests: ConnectionError
 2022-07-04 21:07:57,746 :: app.URLDownloader:50 - CRITICAL - Requests: ConnectionError
+2022-07-04 21:42:57,817 :: app.URLDownloader:283 - CRITICAL - File read Error: [Errno 2] No such file or directory: 'output/page-loader-hexlet-repl-co-.html'
