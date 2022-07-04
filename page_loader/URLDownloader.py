@@ -246,7 +246,7 @@ class URLDownloader:
             bar.next()
         bar.finish()
 
-    def _rewrite_links_html(self, html, links, type): # noqa
+    def _rewrite_links_html(self, html, links, type):  # noqa: C901
         try:
             with open(os.path.join(self.output, html), "r") as f:
                 contents = f.read()
