@@ -11,3 +11,4 @@ coverage.xml
 .vscode
 launch.json
 output
+fixtures

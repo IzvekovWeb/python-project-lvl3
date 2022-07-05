@@ -23,17 +23,27 @@ class URLDownloader:
 
     def download(self):
 
-        main_bar = Bar('Processing', max=4)
+        main_bar = Bar('Processing', max=6)
         logger.debug('Start downloading web page')
+
         page_name = self.page_download()
         main_bar.next()
-        self.images_download(page_name)
+        img_links = self.images_download(page_name)
         main_bar.next()
-        self.css_download(page_name)
+        css_links = self.css_download(page_name)
         main_bar.next()
-        self.js_download(page_name)
+        js_links = self.js_download(page_name)
         main_bar.next()
-        self.html_download(page_name)
+        html_links = self.html_download(page_name)
+        main_bar.next()
+        links_to_rewrite = {}
+        links_to_rewrite['html'] = html_links
+        links_to_rewrite['img'] = img_links
+        links_to_rewrite['css'] = css_links
+        links_to_rewrite['js'] = js_links
+
+        self._rewrite_links_html(page_name, links_to_rewrite)
+
         main_bar.next()
         main_bar.finish()
 
@@ -78,58 +88,54 @@ class URLDownloader:
             type='html'
         )
 
-        # Заменяем ссылки в HTML
-        self._rewrite_links_html(index, links, type='html')
+        return links
 
     def images_download(self, index):
         logger.debug('Images downloading')
         # Получаем ссылки из тегов
-        image_links = self._parce_html(index, 'img')
+        links = self._parce_html(index, 'img')
 
         # Создаём папку
         folder_name = self._create_folder()
 
         # Скачиваем файлы
         self._download_files(
-            image_links,
+            links,
             folder_name,
             type='img'
         )
 
-        # Заменяем ссылки в HTML
-        self._rewrite_links_html(index, image_links, type='img')
+        return links
 
     def css_download(self, index):
         logger.debug('CSS downloading')
-        css_links = self._parce_html(index, type='css')
+        links = self._parce_html(index, type='css')
 
         folder_name = self._create_folder()
 
         # Скачиваем файлы
         self._download_files(
-            css_links,
+            links,
             folder_name,
             type='css'
         )
 
-        # Заменяем ссылки в HTML
-        self._rewrite_links_html(index, css_links, type='css')
+        return links
 
     def js_download(self, index):
         logger.debug('JS downloading')
-        js_links = self._parce_html(index, type='js')
+        links = self._parce_html(index, type='js')
 
         folder_name = self._create_folder()
 
         # Скачиваем файлы
         self._download_files(
-            js_links,
+            links,
             folder_name,
             type='js'
         )
 
-        # Заменяем ссылки в HTML
-        self._rewrite_links_html(index, js_links, type='js')
+        return links
 
     def _create_file_name(self, url, ext='html'):
 
@@ -274,7 +280,7 @@ class URLDownloader:
             bar.next()
         bar.finish()
 
-    def _rewrite_links_html(self, index, links, type):  # noqa: C901
+    def _rewrite_links_html(self, index, data):  # noqa: C901
         try:
             with open(os.path.join(self.output, index), "r") as f:
                 contents = f.read()
@@ -285,21 +291,24 @@ class URLDownloader:
 
         # Заменяем ссылки в HTML
         new_soup = BeautifulSoup(contents, 'html.parser')
-        if type == 'img':
-            for link in links:
-                new_soup.find('img', src=link['old_p'])['src'] = link['new_p']
-        elif type == 'css':
-            for link in links:
-                new_soup.find('link', href=link['old_p'])['href'] = link['new_p']  # noqa: E501
-        elif type == 'js':
-            for link in links:
-                new_soup.find('script', src=link['old_p'])['src'] = link['new_p']  # noqa: E501
-        elif type == 'html':
-            for link in links:
-                new_soup.find('link', href=link['old_p'])['href'] = link['new_p']  # noqa: E501
+        for type in data:
+            links = data[type]
+            if type == 'img':
+                for link in links:
+                    new_soup.find('img', src=link['old_p'])['src'] = link['new_p']  # noqa: E501
+            elif type == 'css':
+                for link in links:
+                    new_soup.find('link', href=link['old_p'])['href'] = link['new_p']  # noqa: E501
+            elif type == 'js':
+                for link in links:
+                    new_soup.find('script', src=link['old_p'])['src'] = link['new_p']  # noqa: E501
+            elif type == 'html':
+                for link in links:
+                    new_soup.find('link', href=link['old_p'])['href'] = link['new_p']  # noqa: E501
+
         try:
             with open(os.path.join(self.output, index), "w") as f:
-                print(new_soup.prettify(), file=f, end="")
+                f.write(new_soup.prettify())
             logger.info('Links rewrited')
         except OSError as e:
             logger.error(f'File write Error: {e}')
