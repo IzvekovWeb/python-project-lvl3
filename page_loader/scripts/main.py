@@ -3,7 +3,7 @@ import argparse
 import os
 import sys
 
-from requests.exceptions import ConnectionError # noqa
+from requests.exceptions import ConnectionError, ConnectionRefusedError # noqa
 from page_loader.loader import download  # noqa
 
 
@@ -29,7 +29,7 @@ def main():
 if __name__ == '__main__':
     try:
         main()
-    except ConnectionError:
+    except (ConnectionError, ConnectionRefusedError):
         sys.exit(0)
     except Exception:
         sys.exit(0)
