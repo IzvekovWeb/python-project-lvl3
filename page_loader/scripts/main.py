@@ -20,16 +20,18 @@ def main():
         help='set path to save')
 
     args = parser.parse_args()
-
-    download(args.url, args.output)
-
+    try:
+        download(args.url, args.output)
+    except Exception:
+        sys.exit(1)
     sys.exit(0)
 
 
 if __name__ == '__main__':
     try:
         main()
+        sys.exit(0)
     except (ConnectionError, ConnectionRefusedError) as err:
-        sys.exit(0)
+        sys.exit(1)
     except Exception:
-        sys.exit(0)
+        sys.exit(1)
