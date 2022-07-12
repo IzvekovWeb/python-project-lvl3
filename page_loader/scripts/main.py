@@ -3,6 +3,7 @@ import argparse
 import os
 import sys
 
+from requests.exceptions import ConnectionError # noqa
 from page_loader.loader import download  # noqa
 
 
@@ -22,11 +23,13 @@ def main():
 
     download(args.url, args.output)
 
-    sys.exit()
+    sys.exit(0)
 
 
 if __name__ == '__main__':
     try:
         main()
+    except ConnectionError:
+        sys.exit(0)
     except Exception:
-        sys.exit()
+        sys.exit(0)
