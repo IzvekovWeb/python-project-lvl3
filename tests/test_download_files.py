@@ -62,7 +62,7 @@ def test_download_css(requests_mock):
 
 def test_download_js(requests_mock):
 
-    with open('tests/fixtures/js_result.js', 'r') as fixture:
+    with open('tests/fixtures/js_result.js', 'rb') as fixture:
         result = fixture.read()
     result = str(result)
 

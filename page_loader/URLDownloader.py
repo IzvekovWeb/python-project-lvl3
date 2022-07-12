@@ -261,20 +261,12 @@ class URLDownloader:
                 logger.critical('ConnectionError')
                 raise ConnectionError
 
-            if type == 'img':
-                try:
-                    with open(os.path.join(self.output, new_path), 'wb') as f:
-                        f.write(r.content)
-                    logger.info('Image seccsesfully downloaded')
-                except OSError as e:
-                    logger.error(f'File write Error: {e}')
-            else:
-                try:
-                    with open(os.path.join(self.output, new_path), 'w', encoding='utf-8') as f:  # noqa: E501
-                        f.write(r.text)
-                    logger.info(f'{type} file seccsesfully downloaded')
-                except OSError as e:
-                    logger.error(f'File write Error: {e}')
+            try:
+                with open(os.path.join(self.output, new_path), 'wb') as f:
+                    f.write(r.content)
+                logger.info('Image seccsesfully downloaded')
+            except OSError as e:
+                logger.error(f'File write Error: {e}')
 
             links[i]['new_p'] = new_path
             bar.next()
