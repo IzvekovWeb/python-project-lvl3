@@ -57,6 +57,7 @@ class URLDownloader:
             r = requests.get(self.url)
         except ConnectionError:
             logger.critical("Requests: ConnectionError")
+            print(0)
             raise ConnectionError
 
         if r.status_code >= 400:
