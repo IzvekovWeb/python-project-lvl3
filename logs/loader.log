@@ -1,3 +1,9 @@
 2022-07-05 18:53:35,675 :: app.URLDownloader:59 - CRITICAL - Requests: ConnectionError
 2022-07-05 19:05:50,239 :: app.URLDownloader:59 - CRITICAL - Requests: ConnectionError
 2022-07-05 19:09:08,609 :: app.URLDownloader:59 - CRITICAL - Requests: ConnectionError
+2022-07-05 20:09:04,754 :: app.URLDownloader:59 - CRITICAL - Requests: ConnectionError
+2022-07-12 17:53:33,124 :: app.URLDownloader:59 - CRITICAL - Requests: ConnectionError
+2022-07-12 17:54:46,512 :: app.URLDownloader:59 - CRITICAL - Requests: ConnectionError
+2022-07-12 17:55:25,192 :: app.URLDownloader:59 - CRITICAL - Requests: ConnectionError
+2022-07-12 18:22:35,645 :: app.URLDownloader:59 - CRITICAL - Requests: ConnectionError
+2022-07-12 20:05:27,312 :: app.URLDownloader:59 - CRITICAL - Requests: ConnectionError

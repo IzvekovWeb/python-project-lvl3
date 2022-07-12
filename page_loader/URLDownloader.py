@@ -270,7 +270,7 @@ class URLDownloader:
                     logger.error(f'File write Error: {e}')
             else:
                 try:
-                    with open(os.path.join(self.output, new_path), 'w') as f:
+                    with open(os.path.join(self.output, new_path), 'w', encoding='utf-8-sig') as f:
                         f.write(r.text)
                     logger.info(f'{type} file seccsesfully downloaded')
                 except OSError as e:
@@ -307,9 +307,7 @@ class URLDownloader:
                     new_soup.find('link', href=link['old_p'])['href'] = link['new_p']  # noqa: E501
 
         try:
-            print(new_soup.en)
             with open(os.path.join(self.output, index), "w") as f:
-                new_soup.encode("utf-8")
                 f.write(new_soup.prettify())
             logger.info('Links rewrited')
         except OSError as e:
