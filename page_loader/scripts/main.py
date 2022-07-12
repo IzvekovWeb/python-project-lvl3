@@ -30,8 +30,7 @@ def main():
 if __name__ == '__main__':
     try:
         main()
-        sys.exit(0)
-    except (ConnectionError, ConnectionRefusedError) as err:
+    except (ConnectionError, ConnectionRefusedError):
         sys.exit(1)
     except Exception:
         sys.exit(1)
