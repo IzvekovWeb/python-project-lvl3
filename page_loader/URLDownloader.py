@@ -270,7 +270,7 @@ class URLDownloader:
                     logger.error(f'File write Error: {e}')
             else:
                 try:
-                    with open(os.path.join(self.output, new_path), 'w', encoding='utf-8-sig') as f:
+                    with open(os.path.join(self.output, new_path), 'w', encoding='utf-8') as f:  # noqa: E501
                         f.write(r.text)
                     logger.info(f'{type} file seccsesfully downloaded')
                 except OSError as e:
