@@ -13,7 +13,7 @@ def main():
     parser.add_argument('url')
 
     parser.add_argument(
-        '-0',
+        '-o',
         '--output',
         default=os.getcwd(),
         help='set path to save')
