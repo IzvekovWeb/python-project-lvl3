@@ -1,6 +1,7 @@
 import os
 import logging
 import logging.config
+import sys
 # import json
 
 from page_loader.URLDownloader import URLDownloader
@@ -10,8 +11,11 @@ def download(url, output=os.getcwd()):
 
     logger.debug('Start program page_loader')
 
-    downloader = URLDownloader(url, output)
-    page_name = downloader.download()
+    try:
+        downloader = URLDownloader(url, output)
+        page_name = downloader.download()
+    except Exception:
+        sys.exit(1)
 
     logger.debug('Stop programm')
 

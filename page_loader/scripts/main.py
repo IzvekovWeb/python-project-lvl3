@@ -20,7 +20,10 @@ def main():
 
     args = parser.parse_args()
 
-    download(args.url, args.output)
+    try:
+        download(args.url, args.output)
+    except Exception:
+        sys.exit(1)
 
 
 if __name__ == '__main__':
