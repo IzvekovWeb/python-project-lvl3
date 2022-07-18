@@ -12,7 +12,7 @@ from requests.exceptions import ConnectionError
 
 def test_page_download(requests_mock):
     with open('tests/fixtures/loader_result.html') as fixture:
-        result = fixture.read()\
+        result = fixture.read()
 
     requests_mock.get('https://page-loader.hexlet.repl.co/', text=result)
 

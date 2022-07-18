@@ -1,8 +1,8 @@
+import json
 import os
 import logging
 import logging.config
 import sys
-# import json
 
 from page_loader.URLDownloader import URLDownloader
 
@@ -24,60 +24,24 @@ def download(url, output=os.getcwd()):
     return os.path.join(output, page_name)
 
 
-LOG_CONFIG = {
-    "version": 1,
-    "formatters": {
-        "detailed": {
-            "format": "%(asctime)s :: %(name)s:%(lineno)s - %(levelname)s - %(message)s"  # noqa: E501
-        }
-    },
-    "handlers": {
-        "std": {
-            "class": "logging.StreamHandler",
-            "level": "ERROR",
-            "formatter": "detailed"
-        },
-        "file": {
-            "class": "logging.FileHandler",
-            "level": "ERROR",
-            "formatter": "detailed",
-            "filename": "logs/loader.log"
-        },
-        "file_info": {
-            "class": "logging.FileHandler",
-            "level": "INFO",
-            "formatter": "detailed",
-            "filename": "logs/file_info.log"
-        }
-    },
-    "loggers": {
-        "app": {
-            "handlers": ["std", "file", "file_info"],
-            "level": "DEBUG"
-        }
-    }
-}
+def get_logging_dict_config():
 
+    try:
+        with open('logs/conf.json') as conf:
+            log_config = json.loads(conf.read())
+    except OSError:
+        raise
 
-def get_logging_dict_config():  # noqa: C901
-
-    # with open('logs/conf.json') as conf:
-    #     log_config = conf.read()
-    if not os.path.exists('logs/loader.log'):
+    if not os.path.exists('logs/loader.log') or \
+            not os.path.exists('logs/file_info.log'):
         try:
             os.makedirs('logs', exist_ok=True)
-            with open('logs/loader.log', 'w'):
-                pass
-        except Exception:
-            raise IsADirectoryError("Path isn't wrong")
-    if not os.path.exists('logs/file_info.log'):
-        try:
-            os.makedirs('logs', exist_ok=True)
-            with open('logs/loader.log', 'w'):
-                pass
+            open('logs/loader.log', 'w').close()
+            open('logs/file_info.log', 'w').close()
         except Exception:
             raise IsADirectoryError("Path is wrong")
-    return LOG_CONFIG
+
+    return log_config
 
 
 logging.config.dictConfig(get_logging_dict_config())
